@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot: components/RandomNumber.jsx with default display function 1`] = `
+<div>
+  <span
+    className="label"
+  >
+    Random Number: 
+  </span>
+  <span
+    className="value"
+  >
+    0.123456789
+  </span>
+</div>
+`;
+
+exports[`Snapshot: components/RandomNumber.jsx with specified display function 1`] = `
+<div>
+  <span
+    className="label"
+  >
+    Random Number: 
+  </span>
+  <span
+    className="value"
+  >
+    {"value":0.123456789}
+  </span>
+</div>
+`;
+
+exports[`Snapshot: components/RandomNumber.jsx with specified display function 2`] = `
+<div>
+  <span
+    className="label"
+  >
+    Random Number: 
+  </span>
+  <span
+    className="value"
+  >
+    1f9add3739635f
+  </span>
+</div>
+`;
+
+exports[`Snapshot: components/RandomNumber.jsx with specified display function 3`] = `
+<div>
+  <span
+    className="label"
+  >
+    Random Number: 
+  </span>
+  <span
+    className="value"
+  >
+    4fzzzxjylrx
+  </span>
+</div>
+`;
+
+exports[`Snapshot: components/RandomNumber.jsx with specified display function 4`] = `
+<div>
+  <span
+    className="label"
+  >
+    Random Number: 
+  </span>
+  <span
+    className="value"
+  >
+    0.01524157875019052
+  </span>
+</div>
+`;
+
+exports[`Snapshot: components/RandomNumber.jsx with specified display function 5`] = `
+<div>
+  <span
+    className="label"
+  >
+    Random Number: 
+  </span>
+  <span
+    className="value"
+  >
+    0, 0.123456789, 0.246913578, 0.370370367
+  </span>
+</div>
+`;

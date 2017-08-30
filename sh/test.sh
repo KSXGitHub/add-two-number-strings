@@ -1,20 +1,21 @@
 (
   printf "Checking Code Style... "
-  standard > stdout.tmp 2> stderr.tmp && (
+  standard $STANDARD_ARGV > stdout.tmp 2> stderr.tmp && (
     echo "passed"
   ) || (
+    code=$?
     echo "failed" >&2
     cat stderr.tmp >&2
     cat stdout.tmp
-    exit 2
+    exit $code
   )
 ) && (
   if [[ $COVERALLS == 'true' ]];
     then
-      jest --coverage && cat ./coverage/lcov.info | coveralls
+      bash ./sh/test-coverage.sh
     else
-      jest
+      bash ./sh/jest.sh
   fi
 ) && (
-  ./sh/build.sh
+  bash ./sh/build.sh
 )

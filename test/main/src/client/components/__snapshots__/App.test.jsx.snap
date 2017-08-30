@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot: components/App.jsx 1`] = `
+<div>
+  <div>
+    <span
+      className="label"
+    >
+      Random Number: 
+    </span>
+    <span
+      className="value"
+    >
+      1f9add3739635f
+    </span>
+  </div>
+</div>
+`;
