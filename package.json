@@ -7,8 +7,7 @@
     "material-ui": "^0.19.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "standard-loader": "^6.0.1",
-    "x-iterable": "^6.0.1"
+    "standard-loader": "^6.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -32,7 +31,8 @@
     "standard": "10.0.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "x-iterable": "^6.0.1"
   },
   "scripts": {
     "browser": "bash ./sh/browser.sh",
