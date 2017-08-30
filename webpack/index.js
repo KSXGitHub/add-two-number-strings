@@ -10,7 +10,7 @@ const APP_FILES = readdirRecursiveSync(APP_DIR).to(Array)
 const config = {
   entry: APP_FILES
     .filter(file => statSync(file).isFile())
-    .filter(file => regexes.js.test(file)),
+    .filter(file => regexes.javascript.test(file)),
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js'

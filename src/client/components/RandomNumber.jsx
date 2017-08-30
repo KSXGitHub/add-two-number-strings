@@ -1,4 +1,5 @@
 import React from 'react'
+import Paper from 'material-ui/Paper'
 
 export default class RandomNumber extends React.Component {
   constructor (props) {
@@ -10,9 +11,9 @@ export default class RandomNumber extends React.Component {
   }
 
   render () {
-    return <div>
+    return <Paper zDepth={0}>
       <span className='label'>Random Number: </span>
       <span className='value'>{this.state.displayValue()}</span>
-    </div>
+    </Paper>
   }
 }

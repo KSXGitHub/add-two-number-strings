@@ -1,3 +1,3 @@
 module.exports = {
-  loaders: require('./loaders.js')
+  rules: require('./rules')
 }

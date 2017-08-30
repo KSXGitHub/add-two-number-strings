@@ -1,4 +1,5 @@
 module.exports = {
-  js: /\.(js|jsx|es[0-9]?x?)$/,
+  javascript: /\.(js|jsx|es[0-9]?x?)$/,
+  style: /\.css$/,
   exclude: /node_modules|bower_components/
 }
