@@ -34,6 +34,9 @@
     "webpack-dev-server": "^2.7.1",
     "x-iterable": "^6.0.1"
   },
+  "optionalDependencies": {
+    "live-server": "^1.2.0"
+  },
   "scripts": {
     "browser": "bash ./sh/browser.sh",
     "browse-local-fs": "bash ./sh/browse-local-fs.sh",
@@ -61,8 +64,5 @@
   },
   "engines": {
     "node": ">= 8.0.0"
-  },
-  "optionalDependencies": {
-    "live-server": "^1.2.0"
   }
 }
