@@ -38,6 +38,7 @@
     "live-server": "^1.2.0"
   },
   "scripts": {
+    "live-server": "live-server dist",
     "browser": "bash ./sh/browser.sh",
     "browse-local-fs": "bash ./sh/browse-local-fs.sh",
     "view-coverage": "bash ./sh/view-coverage.sh",
