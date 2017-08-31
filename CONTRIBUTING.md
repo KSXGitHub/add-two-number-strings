@@ -34,6 +34,8 @@ Our JavaScript code follows [StandardJS](https://standardjs.com/)
   * NPM: Already installed along with Node.js
   * YARN: https://yarnpkg.com/
 
+**NOTE:** The command-lines below are BASH syntax, therefore should be executed in a BASH-like shell environment (e.g. `bash`, `zsh`), not in `CMD.exe`. If you're in Windows and want to use Command Prompt, you either need to make your own valid CMD syntax or run `bash.exe` within Command Prompt.
+
 ### Setup environment
 
 #### Step 1: Get the code
