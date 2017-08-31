@@ -106,10 +106,10 @@ When an attempt to modify React DOM tree is made, the test should fail because o
 When you explicitly intend to modify React DOM structure and the changes of snapshots are as expected, you must assert the changes:
 
 ```sh
-# Step 1: Update snapshots
+# Step 1: Double check snapshots without modifying snapshot files
 npm run jest # OR: yarn run jest
 
-# Step 2: Assert snapshots' update
+# Step 2: Update snapshot files
 npm run jest -- --updateSnapshot # OR: yarn run jest -- --updateSnapshot
 
 # Step 3: Commit snapshots' changes
