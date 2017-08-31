@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot: components/App.jsx 1`] = `
+<mocked-component
+  muiTheme={
+    Object {
+      "theme": undefined,
+    }
+  }
+>
+  <div>
+    <mocked-component
+      title="Hello, World!!"
+    />
+    <mocked-component
+      zDepth={0}
+    >
+      <span
+        className="label"
+      >
+        Random Number: 
+      </span>
+      <span
+        className="value"
+      >
+        1F9ADD3739635F
+      </span>
+    </mocked-component>
+  </div>
+</mocked-component>
+`;

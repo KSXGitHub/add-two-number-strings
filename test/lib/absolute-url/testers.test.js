@@ -1,6 +1,6 @@
 'use strict'
 const {ProductIterable} = require('x-iterable')
-const {testers} = require('../../../../lib/absolute-url')
+const {testers} = require('../../../lib/absolute-url')
 const fnNames = Object.keys(testers).filter(x => /^is[A-Z]/.test(x))
 const random = () => Math.random().toString(16).slice(2, 18)
 

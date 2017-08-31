@@ -34,11 +34,13 @@ Our JavaScript code follows [StandardJS](https://standardjs.com/)
   * NPM: Already installed along with Node.js
   * YARN: https://yarnpkg.com/
 
+**NOTE:** The command-lines below are BASH syntax, therefore should be executed in a BASH-like shell environment (e.g. `bash`, `zsh`), not in `CMD.exe`. If you're in Windows and want to use Command Prompt, you either need to make your own valid CMD syntax or run `bash.exe` within Command Prompt.
+
 ### Setup environment
 
 #### Step 1: Get the code
 
-Use Git to clone this project
+Use Git to clone this project. Open Terminal or Command Prompt and enter the following commands:
 
 ```sh
 mkdir react-hello-world && cd react-hello-world
@@ -60,6 +62,10 @@ yarn install
 ```
 
 ### Run, Test, Build, Deploy
+
+**NOTE:** The following commands invoke bash scripts, make sure that you have POSIX tools installed.
+
+**NOTE:** In Windows 10, there might be some errors regarding `bash` and character `\r`. Problably because you are running WSL bash in non-WSL posix environment. When it happens, read [Troubleshooting Guide](#windows-wsl-conflict) to fix it.
 
 #### Build
 
@@ -102,10 +108,10 @@ When an attempt to modify React DOM tree is made, the test should fail because o
 When you explicitly intend to modify React DOM structure and the changes of snapshots are as expected, you must assert the changes:
 
 ```sh
-# Step 1: Update snapshots
+# Step 1: Double check snapshots without modifying snapshot files
 npm run jest # OR: yarn run jest
 
-# Step 2: Assert snapshots' update
+# Step 2: Update snapshot files
 npm run jest -- --updateSnapshot # OR: yarn run jest -- --updateSnapshot
 
 # Step 3: Commit snapshots' changes
@@ -123,3 +129,45 @@ When you do not want to modify React DOM structure but test fails due to snapsho
   * `git clean --dry-run` is absolutely safe, use it double-check the decision about to be made
   * `git clean --interactive` to make decision for every file individually
   * `git clean --force`: You must be absolutely certain that you won't regret after this
+  * [VS Code](https://code.visualstudio.com/) has an option called 'Discard All Changes'
+
+## Project structure
+
+```
+→ /src: contains content of website
+  → /src/components: contains custom ReactJS components
+  → /src/client: contains client-side code
+  → /src/server: contains server-side code
+
+→ /test: contains unit-test modules
+  → /test/{lib,sh,src}: contains unit-test for each lib, sh, src respectively
+  → /test/**/__lib__: contains helper lib for unit-test
+  → /test/**/__data__: contains preset data for unit-test
+  → /test/**/__snapshots__: contains generated snapshot files
+
+→ /sh: contains script files to be called by npm/yarn
+→ /jest: contains Jest's configuration files
+→ /webpack: contains Webpack's configuration files
+```
+
+## Troubleshooting
+
+### Windows: WSL conflict
+
+If you're using both non-WSL posix tools and WSL in Windows 10, you may encounter some troubles of executing bash in non-WSL posix environment. There're two different ways to fix this.
+
+#### Clone, edit, build project within WSL environment
+
+Just like you do it in a genuine UNIX/Linux environment. There should be no troubles regarding bash.
+
+#### Modify `PATH` environment variable
+
+Place directory `bin` of your POSIX tool before that of WSL.
+
+Open your **non-WSL** bash and enter the following:
+
+```sh
+export PATH="$(dirname "$0"):$PATH"
+```
+
+It is recommended to put the code above into your `.bashrc` file.
