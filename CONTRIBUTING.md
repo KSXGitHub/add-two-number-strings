@@ -61,6 +61,10 @@ yarn install
 
 ### Run, Test, Build, Deploy
 
+**NOTE:** The following commands invoke bash scripts, make sure that you have POSIX tools installed.
+
+**NOTE:** In Windows 10, there might be some errors regarding `bash` and character `\r`. Problably because you are running WSL bash in non-WSL posix environment. When it happens, read [Troubleshooting Guide](#windows-wsl-conflict) to fix it.
+
 #### Build
 
 ```sh
@@ -123,3 +127,42 @@ When you do not want to modify React DOM structure but test fails due to snapsho
   * `git clean --dry-run` is absolutely safe, use it double-check the decision about to be made
   * `git clean --interactive` to make decision for every file individually
   * `git clean --force`: You must be absolutely certain that you won't regret after this
+
+## Project structure
+
+```
+→ /src: contains content of website
+  → /src/components: contains custom ReactJS components
+  → /src/client: contains client-side code
+  → /src/server: contains server-side code
+
+→ /test: contains unit-test modules
+  → /test/data: contains preset data for testing
+  → /test/main: contains unit-test modules
+
+→ /sh: contains script files to be called by npm/yarn
+→ /jest: contains Jest's configuration files
+→ /webpack: contains Webpack's configuration files
+```
+
+## Troubleshooting
+
+### Windows: WSL conflict
+
+If you're using both non-WSL posix tools and WSL in Windows 10, you may encounter some troubles of executing bash in non-WSL posix environment. There're two different ways to fix this.
+
+#### Clone, edit, build project within WSL environment
+
+Just like you do it in a genuine UNIX/Linux environment. There should be no troubles regarding bash.
+
+#### Modify `PATH` environment variable
+
+Place directory `bin` of your POSIX tool before that of WSL.
+
+Open your **non-WSL** bash and enter the following:
+
+```sh
+export PATH="$(dirname "$0"):$PATH"
+```
+
+It is recommended to put the code above into your `.bashrc` file.

@@ -36,7 +36,9 @@
   },
   "scripts": {
     "browser": "bash ./sh/browser.sh",
+    "browse-local-fs": "bash ./sh/browse-local-fs.sh",
     "view-coverage": "bash ./sh/view-coverage.sh",
+    "view-dist": "bash ./sh/view-dist.sh",
     "coveralls": "coveralls",
     "unit-test": "bash ./sh/jest.sh",
     "unit-test-watch": "bash ./sh/jest.sh --watch",
