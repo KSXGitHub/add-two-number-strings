@@ -38,7 +38,7 @@ Our JavaScript code follows [StandardJS](https://standardjs.com/)
 
 #### Step 1: Get the code
 
-Use Git to clone this project
+Use Git to clone this project. Open Terminal or Command Prompt and enter the following commands:
 
 ```sh
 mkdir react-hello-world && cd react-hello-world
