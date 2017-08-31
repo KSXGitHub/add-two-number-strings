@@ -137,8 +137,10 @@ When you do not want to modify React DOM structure but test fails due to snapsho
   → /src/server: contains server-side code
 
 → /test: contains unit-test modules
-  → /test/data: contains preset data for testing
-  → /test/main: contains unit-test modules
+  → /test/{lib,sh,src}: contains unit-test for each lib, sh, src respectively
+  → /test/**/__lib__: contains helper lib for unit-test
+  → /test/**/__data__: contains preset data for unit-test
+  → /test/**/__snapshots__: contains generated snapshot files
 
 → /sh: contains script files to be called by npm/yarn
 → /jest: contains Jest's configuration files
