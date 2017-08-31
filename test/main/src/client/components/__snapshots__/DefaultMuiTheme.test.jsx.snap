@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot: components/DefaultMuiTheme.jsx 1`] = `<div />`;
+exports[`Snapshot: components/DefaultMuiTheme.jsx 1`] = `
+<mocked-component
+  muiTheme={
+    Object {
+      "theme": undefined,
+    }
+  }
+>
+  <div />
+</mocked-component>
+`;

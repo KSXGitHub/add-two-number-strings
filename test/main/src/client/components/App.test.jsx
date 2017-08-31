@@ -1,3 +1,4 @@
+import './__lib__/material-ui-mocks.jsx'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import App from '../../../../../src/client/components/App.jsx'
