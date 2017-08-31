@@ -150,6 +150,38 @@ When you do not want to modify React DOM structure but test fails due to snapsho
 → /webpack: contains Webpack's configuration files
 ```
 
+## Tips and Tricks
+
+### Use hot-loading servers without Internet connection
+
+For some reasons, `webpack-dev-server` requires Internet connection in order to work (even though the users do not wish to broadcast their website during development), which makes no sense.
+
+For this reason, I find a way around this: Let's just use [`live-server`](https://www.npmjs.com/package/live-server) — a server runner that watches files' changes and reload the website automatically!
+
+**INSTALLATION:** `live-server` should've been installed as an optional dependency, if it's not then install it:
+
+```sh
+npm install --save-optional live-server # OR: yarn add --optional live-server
+```
+
+**USE CASE 1:** *Use `live-server` to serve webpack build results (`dist` folder)*
+
+You need to open at least two terminal sessions: One for `live-server`, one for `webpack`
+
+* In `live-server`'s terminal, run `npm run serve-dist` (or `yarn run serve-dist`)
+
+* In `webpack`'s terminal, run `npm run webpack-watch` (or `yarn run webpack-watch`)
+
+**USE CASE 2:** *Use `live-server` to display coverage reports (`coverage/lcov-report` folder)*
+
+You need to open at least two terminal sessions: One for `live-server`, one for `jest`
+
+* In `live-server`'s terminal, run `npm run serve-coverage` (or `yarn run serve-coverage`)
+
+* In `jest`'s terminal, `npm run unit-test-watch` (or `yarn run unit-test-watch`)
+
+**NOTE:** Aside from `live-server`, you can also use [`live-server`](https://atom.io/packages/atom-live-server) or [`live-server`](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), they're all awesome!
+
 ## Troubleshooting
 
 ### Windows: WSL conflict
