@@ -34,11 +34,13 @@ Our JavaScript code follows [StandardJS](https://standardjs.com/)
   * NPM: Already installed along with Node.js
   * YARN: https://yarnpkg.com/
 
+**NOTE:** The command-lines below are BASH syntax, therefore should be executed in a BASH-like shell environment (e.g. `bash`, `zsh`), not in `CMD.exe`. If you're in Windows and want to use Command Prompt, you either need to make your own valid CMD syntax or run `bash.exe` within Command Prompt.
+
 ### Setup environment
 
 #### Step 1: Get the code
 
-Use Git to clone this project
+Use Git to clone this project. Open Terminal or Command Prompt and enter the following commands:
 
 ```sh
 mkdir react-hello-world && cd react-hello-world
@@ -106,10 +108,10 @@ When an attempt to modify React DOM tree is made, the test should fail because o
 When you explicitly intend to modify React DOM structure and the changes of snapshots are as expected, you must assert the changes:
 
 ```sh
-# Step 1: Update snapshots
+# Step 1: Double check snapshots without modifying snapshot files
 npm run jest # OR: yarn run jest
 
-# Step 2: Assert snapshots' update
+# Step 2: Update snapshot files
 npm run jest -- --updateSnapshot # OR: yarn run jest -- --updateSnapshot
 
 # Step 3: Commit snapshots' changes
@@ -127,6 +129,7 @@ When you do not want to modify React DOM structure but test fails due to snapsho
   * `git clean --dry-run` is absolutely safe, use it double-check the decision about to be made
   * `git clean --interactive` to make decision for every file individually
   * `git clean --force`: You must be absolutely certain that you won't regret after this
+  * [VS Code](https://code.visualstudio.com/) has an option called 'Discard All Changes'
 
 ## Project structure
 
@@ -137,8 +140,10 @@ When you do not want to modify React DOM structure but test fails due to snapsho
   → /src/server: contains server-side code
 
 → /test: contains unit-test modules
-  → /test/data: contains preset data for testing
-  → /test/main: contains unit-test modules
+  → /test/{lib,sh,src}: contains unit-test for each lib, sh, src respectively
+  → /test/**/__lib__: contains helper lib for unit-test
+  → /test/**/__data__: contains preset data for unit-test
+  → /test/**/__snapshots__: contains generated snapshot files
 
 → /sh: contains script files to be called by npm/yarn
 → /jest: contains Jest's configuration files
