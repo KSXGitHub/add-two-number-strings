@@ -132,9 +132,8 @@ When you do not want to modify React DOM structure but test fails due to snapsho
 
 ```
 → /src: contains content of website
+  → /src/components: contains custom ReactJS components
   → /src/client: contains client-side code
-    → /src/client/components: contains custom ReactJS components
-
   → /src/server: contains server-side code
 
 → /test: contains unit-test modules
