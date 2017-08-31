@@ -13,18 +13,53 @@ exports[`Snapshot: components/App.jsx 1`] = `
       title="Hello, World!!"
     />
     <mocked-component
-      zDepth={0}
+      zDepth={1}
     >
-      <span
-        className="label"
-      >
-        Random Number: 
-      </span>
-      <span
-        className="value"
-      >
-        1F9ADD3739635F
-      </span>
+      <div>
+        <div
+          className="text-field-container"
+        >
+          <mocked-component
+            hintText="From..."
+            onChange={[Function]}
+            value={0}
+          />
+          <mocked-component
+            hintText="To..."
+            onChange={[Function]}
+            value={13}
+          />
+          <mocked-component
+            checked={true}
+            label="UpperCase"
+            labelPosition="right"
+            onCheck={[Function]}
+            style={
+              Object {
+                "marginBottom": 16,
+              }
+            }
+          />
+        </div>
+        <div
+          className="output-container"
+        >
+          <mocked-component
+            zDepth={0}
+          >
+            <span
+              className="label"
+            >
+              Random Number: 
+            </span>
+            <span
+              className="value"
+            >
+              739A641215C86
+            </span>
+          </mocked-component>
+        </div>
+      </div>
     </mocked-component>
   </div>
 </mocked-component>
