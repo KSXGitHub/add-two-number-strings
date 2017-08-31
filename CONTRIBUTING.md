@@ -171,3 +171,7 @@ export PATH="$(dirname "$0"):$PATH"
 ```
 
 It is recommended to put the code above into your `.bashrc` file.
+
+### Error: addMembership ENODEV
+
+When you're trying to run `npm start`/`yarn start`/`webpack-dev-server` without Internet connection, you're most likely encounter this error. See [this workaround](#use-hot-loading-servers-without-internet-connection) to overcome this.
