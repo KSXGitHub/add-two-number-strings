@@ -6,11 +6,13 @@ exports[`Snapshot: components/RandomNumber.jsx with default display function 1`]
 >
   <span
     className="label"
+    style={Object {}}
   >
-    Random Number: 
+    Random Number: 
   </span>
   <span
     className="value"
+    style={Object {}}
   >
     0.123456789
   </span>
@@ -23,11 +25,13 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 1
 >
   <span
     className="label"
+    style={Object {}}
   >
-    Random Number: 
+    Random Number: 
   </span>
   <span
     className="value"
+    style={Object {}}
   >
     {"value":0.123456789}
   </span>
@@ -40,11 +44,13 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 2
 >
   <span
     className="label"
+    style={Object {}}
   >
-    Random Number: 
+    Random Number: 
   </span>
   <span
     className="value"
+    style={Object {}}
   >
     1f9add3739635f
   </span>
@@ -57,11 +63,13 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 3
 >
   <span
     className="label"
+    style={Object {}}
   >
-    Random Number: 
+    Random Number: 
   </span>
   <span
     className="value"
+    style={Object {}}
   >
     4fzzzxjylrx
   </span>
@@ -74,11 +82,13 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 4
 >
   <span
     className="label"
+    style={Object {}}
   >
-    Random Number: 
+    Random Number: 
   </span>
   <span
     className="value"
+    style={Object {}}
   >
     0.01524157875019052
   </span>
@@ -91,11 +101,13 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 5
 >
   <span
     className="label"
+    style={Object {}}
   >
-    Random Number: 
+    Random Number: 
   </span>
   <span
     className="value"
+    style={Object {}}
   >
     0, 0.123456789, 0.246913578, 0.370370367
   </span>

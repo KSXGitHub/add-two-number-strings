@@ -49,13 +49,15 @@ exports[`Snapshot: components/App.jsx 1`] = `
           >
             <span
               className="label"
+              style={Object {}}
             >
-              Random Number: 
+              Random Number: 
             </span>
             <span
               className="value"
+              style={Object {}}
             >
-              739A641215C86
+              6FF165A682AEC
             </span>
           </mocked-component>
         </div>
