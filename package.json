@@ -34,13 +34,23 @@
     "webpack-dev-server": "^2.7.1",
     "x-iterable": "^6.0.1"
   },
+  "optionalDependencies": {
+    "live-server": "^1.2.0"
+  },
   "scripts": {
-    "browser": "bash ./sh/browser.sh",
-    "view-coverage": "bash ./sh/view-coverage.sh",
+    "live-server": "live-server",
+    "serve-dist": "live-server dist",
+    "serve-coverage": "live-server coverage/lcov-report",
+    "browser": "bash sh/browser.sh",
+    "browse-local-fs": "bash sh/browse-local-fs.sh",
+    "view-coverage": "bash sh/view-coverage.sh",
+    "view-dist": "bash sh/view-dist.sh",
     "coveralls": "coveralls",
-    "unit-test": "bash ./sh/jest.sh",
-    "unit-test-watch": "bash ./sh/jest.sh --watch",
-    "unit-test-coverage": "bash ./sh/test-coverage.sh",
+    "unit-test": "bash sh/jest.sh",
+    "unit-test-watch": "bash sh/jest.sh --watch",
+    "unit-test-coverage": "bash sh/test-coverage.sh",
+    "webpack": "webpack",
+    "webpack-watch": "webpack --watch -d",
     "start": "webpack-dev-server",
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",

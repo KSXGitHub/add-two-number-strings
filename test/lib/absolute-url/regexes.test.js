@@ -1,5 +1,5 @@
 'use strict'
-const {regexes} = require('../../../../lib/absolute-url')
+const {regexes} = require('../../../lib/absolute-url')
 
 describe('Object absoluteURL.regexes', () => {
   const received = Object.keys(regexes).filter(x => /^[a-z_]+$/i.test(x))

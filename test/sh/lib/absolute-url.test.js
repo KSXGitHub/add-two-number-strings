@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const {spawnSync} = require('child_process')
-const script = path.resolve(__dirname, '../../../../sh/lib/absolute-url.js')
+const script = path.resolve(__dirname, '../../../sh/lib/absolute-url.js')
 
 const mat = [
   ['Absolute URL', 'https://example.com', 'https://example.com'],
