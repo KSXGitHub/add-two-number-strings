@@ -60,7 +60,7 @@ export default class RandomNumberForm extends React.Component {
       <div className='output-container'>
         <RandomNumber
           display={getText}
-          init={this.init}
+          init={this.state.init}
           style={{
             label: {
               color: 'gray'
