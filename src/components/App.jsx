@@ -6,6 +6,6 @@ import RandomNumberForm from './RandomNumberForm.jsx'
 export default function App ({init}) {
   return <DefaultMuiTheme><div>
     <AppBar title='Hello, World!!' />
-    <RandomNumberForm />
+    <RandomNumberForm init={init} />
   </div></DefaultMuiTheme>
 }
