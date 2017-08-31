@@ -47,6 +47,8 @@
     "unit-test": "bash sh/jest.sh",
     "unit-test-watch": "bash sh/jest.sh --watch",
     "unit-test-coverage": "bash sh/test-coverage.sh",
+    "webpack": "webpack",
+    "webpack-watch": "webpack --watch -d",
     "start": "webpack-dev-server",
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
