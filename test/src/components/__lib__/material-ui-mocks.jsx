@@ -1,5 +1,6 @@
 import path from 'path'
 import React from 'react'
+import '../../../../lib/native-js-mocks'
 
 function createMockedComponent () {
   return class MockedComponent extends React.Component {
@@ -37,7 +38,9 @@ function createMockedComponentSuite (moduleName) {
   'material-ui/Paper',
   'material-ui/TextField',
   'material-ui/Toggle',
-  'material-ui/Checkbox'
+  'material-ui/Checkbox',
+  'material-ui/Slider',
+  'material-ui/Card'
 ].forEach(moduleName =>
   jest.doMock(moduleName, createMockedComponentSuite(moduleName))
 )
