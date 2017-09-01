@@ -46,7 +46,7 @@ export default class RandomNumberForm extends React.Component {
           max={this.state.end}
           step={1}
           value={this.state.begin}
-          onChange={(_, begin) => this.setState({begin})}
+          onChange={(_, begin) => begin < this.state.end && this.setState({begin})}
         />
 
         <p>
@@ -56,9 +56,10 @@ export default class RandomNumberForm extends React.Component {
         <Slider
           id='end-slider'
           min={this.state.begin}
-          max={this.state.begin === 13 ? 14 : 13}
+          max={13}
+          step={1}
           value={this.state.end}
-          onChange={(_, end) => this.setState({end})}
+          onChange={(_, end) => end > this.state.begin && this.setState({end})}
         />
 
         <Checkbox

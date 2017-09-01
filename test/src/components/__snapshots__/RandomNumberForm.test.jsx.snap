@@ -35,6 +35,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with default display function
         max={13}
         min={0}
         onChange={[Function]}
+        step={1}
         value={13}
       />
       <mocked-component
@@ -118,6 +119,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         max={13}
         min={0}
         onChange={[Function]}
+        step={1}
         value={13}
       />
       <mocked-component
@@ -201,6 +203,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         max={13}
         min={0}
         onChange={[Function]}
+        step={1}
         value={13}
       />
       <mocked-component
@@ -284,6 +287,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         max={13}
         min={0}
         onChange={[Function]}
+        step={1}
         value={13}
       />
       <mocked-component
@@ -367,6 +371,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         max={13}
         min={0}
         onChange={[Function]}
+        step={1}
         value={13}
       />
       <mocked-component
@@ -450,6 +455,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         max={13}
         min={0}
         onChange={[Function]}
+        step={1}
         value={13}
       />
       <mocked-component
