@@ -6,7 +6,7 @@ import Clock from '../../../src/components/Clock.jsx'
 
 describe('Snapshot: components/Clock.jsx', () => {
   const display = date => (<p>{String(date)}</p>)
-  const wrap = props => (<p {...props}></p>)
+  const wrap = props => (<p {...props} />)
   const content = date => String(date)
 
   const suite = {
