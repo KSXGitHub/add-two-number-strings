@@ -16,7 +16,8 @@ function createMockedComponent () {
   'material-ui/TextField',
   'material-ui/Toggle',
   'material-ui/Checkbox',
-  'material-ui/Slider'
+  'material-ui/Slider',
+  'material-ui/Card'
 ].forEach(moduleName =>
   jest.doMock(moduleName, createMockedComponent)
 )
