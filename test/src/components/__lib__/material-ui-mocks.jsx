@@ -1,5 +1,6 @@
 import path from 'path'
 import React from 'react'
+import '../../../../lib/native-js-mocks'
 
 function createMockedComponent () {
   return class MockedComponent extends React.Component {
