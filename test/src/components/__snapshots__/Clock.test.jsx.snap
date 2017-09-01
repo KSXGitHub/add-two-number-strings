@@ -2,7 +2,7 @@
 
 exports[`Snapshot: components/Clock.jsx props = {} 1`] = `
 <span>
-  07:00:00 GMT+0700 (+08)
+  07:00:00 GMT+0700 (+07)
 </span>
 `;
 
@@ -26,6 +26,6 @@ exports[`Snapshot: components/Clock.jsx props.format = {wrap, content} 1`] = `
 
 exports[`Snapshot: components/Clock.jsx props.format = {wrap} 1`] = `
 <span>
-  07:00:00 GMT+0700 (+08)
+  07:00:00 GMT+0700 (+07)
 </span>
 `;
