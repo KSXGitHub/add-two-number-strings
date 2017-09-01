@@ -1,3 +1,4 @@
+import path from 'path'
 import React from 'react'
 
 function createMockedComponent () {
@@ -6,6 +7,27 @@ function createMockedComponent () {
       return <mocked-component {...this.props} />
     }
   }
+}
+
+function createMockedComponentSuite (moduleName) {
+  const realModule = require(moduleName)
+  const defaultExport = realModule._default
+
+  const keys = Object.keys(realModule)
+    .filter(key => typeof key === 'string')
+    .filter(key => /^[A-Z][a-zA-Z0-9]+$/.test(key))
+    .filter(key => typeof realModule[key] === 'function')
+
+  const suite = keys.reduce(
+    (object, key) =>
+      ({[key]: createMockedComponent(), ...object}),
+    {}
+  )
+
+  const defaultKey = keys.find(key => realModule[key] === defaultExport)
+  const defaultComponent = defaultKey ? suite[defaultKey] : createMockedComponent()
+  const MockedComponentSuite = Object.assign(defaultComponent, suite)
+  return () => MockedComponentSuite
 }
 
 ; [
@@ -17,7 +39,7 @@ function createMockedComponent () {
   'material-ui/Toggle',
   'material-ui/Checkbox'
 ].forEach(moduleName =>
-  jest.doMock(moduleName, createMockedComponent)
+  jest.doMock(moduleName, createMockedComponentSuite(moduleName))
 )
 
 jest.doMock('material-ui/styles/getMuiTheme', () => jest.fn(theme => ({theme})))
