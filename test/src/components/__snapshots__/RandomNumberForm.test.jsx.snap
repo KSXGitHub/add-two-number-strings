@@ -40,7 +40,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with default display function
       />
       <mocked-component
         checked={true}
-        label="UpperCase"
+        label="Upper Case"
         labelPosition="right"
         onCheck={[Function]}
         style={
@@ -124,7 +124,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
       />
       <mocked-component
         checked={true}
-        label="UpperCase"
+        label="Upper Case"
         labelPosition="right"
         onCheck={[Function]}
         style={
@@ -208,7 +208,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
       />
       <mocked-component
         checked={true}
-        label="UpperCase"
+        label="Upper Case"
         labelPosition="right"
         onCheck={[Function]}
         style={
@@ -292,7 +292,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
       />
       <mocked-component
         checked={true}
-        label="UpperCase"
+        label="Upper Case"
         labelPosition="right"
         onCheck={[Function]}
         style={
@@ -376,7 +376,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
       />
       <mocked-component
         checked={true}
-        label="UpperCase"
+        label="Upper Case"
         labelPosition="right"
         onCheck={[Function]}
         style={
@@ -460,7 +460,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
       />
       <mocked-component
         checked={true}
-        label="UpperCase"
+        label="Upper Case"
         labelPosition="right"
         onCheck={[Function]}
         style={

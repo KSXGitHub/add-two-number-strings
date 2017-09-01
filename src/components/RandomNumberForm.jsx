@@ -63,7 +63,7 @@ export default class RandomNumberForm extends React.Component {
         />
 
         <Checkbox
-          label='UpperCase'
+          label='Upper Case'
           checked={this.state.uppercase}
           onCheck={(_, uppercase) => this.setState({uppercase})}
           style={{marginBottom: 16}}
