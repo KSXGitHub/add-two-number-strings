@@ -35,7 +35,8 @@
     "x-iterable": "^6.0.1"
   },
   "optionalDependencies": {
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.0",
+    "localtunnel": "^1.8.3"
   },
   "scripts": {
     "live-server": "live-server",
