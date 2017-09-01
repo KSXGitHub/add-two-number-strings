@@ -35,26 +35,10 @@ export default class RandomNumberForm extends React.Component {
       )[this.state.uppercase ? 'toUpperCase' : 'toLowerCase']()
     ) || this.state.defaultContent
 
-    const randomNumber = <RandomNumber
-      display={getText}
-      init={this.state.init}
-      style={{
-        label: {
-          color: 'gray'
-        },
-        value: {
-          color: 'brown',
-          fontFamily: 'monospace',
-          fontSize: '1.75em'
-        }
-      }}
-      label={null}
-    />
-
     return <Paper zDepth={1}><Card>
       <CardHeader
         title='Random Number'
-        subtitle={randomNumber}
+        subtitle='Click to expand tweak tools'
         actAsExpander
         showExpandableButton
       />
@@ -95,6 +79,24 @@ export default class RandomNumberForm extends React.Component {
             labelPosition='right'
           />
         </CardActions>
+      </CardText>
+
+      <CardText>
+        <RandomNumber
+          display={getText}
+          init={this.state.init}
+          style={{
+            label: {
+              color: 'gray'
+            },
+            value: {
+              color: 'brown',
+              fontFamily: 'monospace',
+              fontSize: '1.75em'
+            }
+          }}
+          label={null}
+        />
       </CardText>
     </Card></Paper>
   }

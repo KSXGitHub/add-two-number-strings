@@ -8,25 +8,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with default display function
     <mocked-component
       actAsExpander={true}
       showExpandableButton={true}
-      subtitle={
-        <RandomNumber
-          display={[Function]}
-          init={[Function]}
-          label={null}
-          style={
-            Object {
-              "label": Object {
-                "color": "gray",
-              },
-              "value": Object {
-                "color": "brown",
-                "fontFamily": "monospace",
-                "fontSize": "1.75em",
-              },
-            }
-          }
-        />
-      }
+      subtitle="Click to expand tweak tools"
       title="Random Number"
     />
     <mocked-component
@@ -76,6 +58,24 @@ exports[`Snapshot: components/RandomNumberForm.jsx with default display function
             }
           }
         />
+      </mocked-component>
+    </mocked-component>
+    <mocked-component>
+      <mocked-component
+        zDepth={0}
+      >
+        <span
+          className="value"
+          style={
+            Object {
+              "color": "brown",
+              "fontFamily": "monospace",
+              "fontSize": "1.75em",
+            }
+          }
+        >
+          1F9ADD3739635
+        </span>
       </mocked-component>
     </mocked-component>
   </mocked-component>
@@ -90,25 +90,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
     <mocked-component
       actAsExpander={true}
       showExpandableButton={true}
-      subtitle={
-        <RandomNumber
-          display={[Function]}
-          init={[Function]}
-          label={null}
-          style={
-            Object {
-              "label": Object {
-                "color": "gray",
-              },
-              "value": Object {
-                "color": "brown",
-                "fontFamily": "monospace",
-                "fontSize": "1.75em",
-              },
-            }
-          }
-        />
-      }
+      subtitle="Click to expand tweak tools"
       title="Random Number"
     />
     <mocked-component
@@ -158,6 +140,24 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
             }
           }
         />
+      </mocked-component>
+    </mocked-component>
+    <mocked-component>
+      <mocked-component
+        zDepth={0}
+      >
+        <span
+          className="value"
+          style={
+            Object {
+              "color": "brown",
+              "fontFamily": "monospace",
+              "fontSize": "1.75em",
+            }
+          }
+        >
+          1F9ADD3739635
+        </span>
       </mocked-component>
     </mocked-component>
   </mocked-component>
@@ -172,25 +172,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
     <mocked-component
       actAsExpander={true}
       showExpandableButton={true}
-      subtitle={
-        <RandomNumber
-          display={[Function]}
-          init={[Function]}
-          label={null}
-          style={
-            Object {
-              "label": Object {
-                "color": "gray",
-              },
-              "value": Object {
-                "color": "brown",
-                "fontFamily": "monospace",
-                "fontSize": "1.75em",
-              },
-            }
-          }
-        />
-      }
+      subtitle="Click to expand tweak tools"
       title="Random Number"
     />
     <mocked-component
@@ -240,6 +222,24 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
             }
           }
         />
+      </mocked-component>
+    </mocked-component>
+    <mocked-component>
+      <mocked-component
+        zDepth={0}
+      >
+        <span
+          className="value"
+          style={
+            Object {
+              "color": "brown",
+              "fontFamily": "monospace",
+              "fontSize": "1.75em",
+            }
+          }
+        >
+          1F9ADD3739635
+        </span>
       </mocked-component>
     </mocked-component>
   </mocked-component>
@@ -254,25 +254,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
     <mocked-component
       actAsExpander={true}
       showExpandableButton={true}
-      subtitle={
-        <RandomNumber
-          display={[Function]}
-          init={[Function]}
-          label={null}
-          style={
-            Object {
-              "label": Object {
-                "color": "gray",
-              },
-              "value": Object {
-                "color": "brown",
-                "fontFamily": "monospace",
-                "fontSize": "1.75em",
-              },
-            }
-          }
-        />
-      }
+      subtitle="Click to expand tweak tools"
       title="Random Number"
     />
     <mocked-component
@@ -322,6 +304,24 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
             }
           }
         />
+      </mocked-component>
+    </mocked-component>
+    <mocked-component>
+      <mocked-component
+        zDepth={0}
+      >
+        <span
+          className="value"
+          style={
+            Object {
+              "color": "brown",
+              "fontFamily": "monospace",
+              "fontSize": "1.75em",
+            }
+          }
+        >
+          1F9ADD3739635
+        </span>
       </mocked-component>
     </mocked-component>
   </mocked-component>
@@ -336,25 +336,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
     <mocked-component
       actAsExpander={true}
       showExpandableButton={true}
-      subtitle={
-        <RandomNumber
-          display={[Function]}
-          init={[Function]}
-          label={null}
-          style={
-            Object {
-              "label": Object {
-                "color": "gray",
-              },
-              "value": Object {
-                "color": "brown",
-                "fontFamily": "monospace",
-                "fontSize": "1.75em",
-              },
-            }
-          }
-        />
-      }
+      subtitle="Click to expand tweak tools"
       title="Random Number"
     />
     <mocked-component
@@ -406,6 +388,24 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         />
       </mocked-component>
     </mocked-component>
+    <mocked-component>
+      <mocked-component
+        zDepth={0}
+      >
+        <span
+          className="value"
+          style={
+            Object {
+              "color": "brown",
+              "fontFamily": "monospace",
+              "fontSize": "1.75em",
+            }
+          }
+        >
+          1F9ADD3739635
+        </span>
+      </mocked-component>
+    </mocked-component>
   </mocked-component>
 </mocked-component>
 `;
@@ -418,25 +418,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
     <mocked-component
       actAsExpander={true}
       showExpandableButton={true}
-      subtitle={
-        <RandomNumber
-          display={[Function]}
-          init={[Function]}
-          label={null}
-          style={
-            Object {
-              "label": Object {
-                "color": "gray",
-              },
-              "value": Object {
-                "color": "brown",
-                "fontFamily": "monospace",
-                "fontSize": "1.75em",
-              },
-            }
-          }
-        />
-      }
+      subtitle="Click to expand tweak tools"
       title="Random Number"
     />
     <mocked-component
@@ -486,6 +468,24 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
             }
           }
         />
+      </mocked-component>
+    </mocked-component>
+    <mocked-component>
+      <mocked-component
+        zDepth={0}
+      >
+        <span
+          className="value"
+          style={
+            Object {
+              "color": "brown",
+              "fontFamily": "monospace",
+              "fontSize": "1.75em",
+            }
+          }
+        >
+          1F9ADD3739635
+        </span>
       </mocked-component>
     </mocked-component>
   </mocked-component>
