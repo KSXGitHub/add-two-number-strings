@@ -1,6 +1,6 @@
 'use strict'
 const {ProductIterable, RangeIterable: {range}} = require('x-iterable')
-const {resolve} = require('../../../../lib/absolute-url')
+const {resolve} = require('../../../lib/absolute-url')
 const funcCallString = uri => `absoluteURL.resolve(${JSON.stringify(uri)})`
 const testList = (uriList, testUnit) => uriList.forEach(testUnit)
 
