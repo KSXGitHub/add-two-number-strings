@@ -39,13 +39,20 @@ export default class RandomNumberForm extends React.Component {
         <TextField
           hintText='From...'
           value={this.state.begin}
-          onChange={(_, begin) => this.setState({begin})}
+          onChange={(_, value) => {
+            const begin = parseInt(value || 0)
+            console.log({begin})
+            if (isFinite(begin) && begin >= 0 && begin <= this.state.end) this.setState({begin})
+          }}
         />
 
         <TextField
           hintText='To...'
           value={this.state.end}
-          onChange={(_, end) => this.setState({end})}
+          onChange={(_, value) => {
+            const end = parseInt(value || 0)
+            if (isFinite(end) && end <= 13 && end >= this.state.begin) this.setState({end})
+          }}
         />
 
         <Checkbox
