@@ -10,7 +10,7 @@ export default class Clock extends React.Component {
         wrap: Wrap = props => (<span {...props} />),
         content: getContent = date => date.toTimeString()
       } = {},
-      display = date => (<span>{getContent(date)}</span>)
+      display = date => (<Wrap>{getContent(date)}</Wrap>)
     } = props
 
     this.state = {date: new Date(), display}
