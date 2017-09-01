@@ -1,5 +1,6 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import Slider from 'material-ui/Slider'
 import Checkbox from 'material-ui/Checkbox'
 import RandomNumber from './RandomNumber.jsx'
@@ -34,59 +35,66 @@ export default class RandomNumberForm extends React.Component {
       )[this.state.uppercase ? 'toUpperCase' : 'toLowerCase']()
     ) || this.state.defaultContent
 
-    return <Paper zDepth={1}><div>
-      <div className='tweak-tools-container'>
-        <p>
-          <label htmlFor='begin-slider'>Begin</label>
-        </p>
+    const randomNumber = <RandomNumber
+      display={getText}
+      init={this.state.init}
+      style={{
+        label: {
+          color: 'gray'
+        },
+        value: {
+          color: 'brown',
+          fontFamily: 'monospace',
+          fontSize: '1.75em'
+        }
+      }}
+    />
 
-        <Slider
-          id='begin-slider'
-          min={0}
-          max={this.state.end}
-          step={1}
-          value={this.state.begin}
-          onChange={(_, begin) => begin < this.state.end && this.setState({begin})}
-        />
+    return <Paper zDepth={1}><Card>
+      <CardHeader
+        title='Random Number'
+        subtitle={randomNumber}
+        actAsExpander
+        showExpandableButton
+      />
 
-        <p>
-          <label htmlFor='end-slider'>End</label>
-        </p>
+      <CardText expandable>
+        <CardActions expandable>
+          <p>
+            <label htmlFor='begin-slider'>Begin</label>
+          </p>
 
-        <Slider
-          id='end-slider'
-          min={this.state.begin}
-          max={13}
-          step={1}
-          value={this.state.end}
-          onChange={(_, end) => end > this.state.begin && this.setState({end})}
-        />
+          <Slider
+            id='begin-slider'
+            min={0}
+            max={this.state.end}
+            step={1}
+            value={this.state.begin}
+            onChange={(_, begin) => begin < this.state.end && this.setState({begin})}
+          />
 
-        <Checkbox
-          label='Upper Case'
-          checked={this.state.uppercase}
-          onCheck={(_, uppercase) => this.setState({uppercase})}
-          style={{marginBottom: 16}}
-          labelPosition='right'
-        />
-      </div>
+          <p>
+            <label htmlFor='end-slider'>End</label>
+          </p>
 
-      <div className='output-container'>
-        <RandomNumber
-          display={getText}
-          init={this.state.init}
-          style={{
-            label: {
-              color: 'gray'
-            },
-            value: {
-              color: 'brown',
-              fontFamily: 'monospace',
-              fontSize: '1.75em'
-            }
-          }}
-        />
-      </div>
-    </div></Paper>
+          <Slider
+            id='end-slider'
+            min={this.state.begin}
+            max={13}
+            step={1}
+            value={this.state.end}
+            onChange={(_, end) => end > this.state.begin && this.setState({end})}
+          />
+
+          <Checkbox
+            label='Upper Case'
+            checked={this.state.uppercase}
+            onCheck={(_, uppercase) => this.setState({uppercase})}
+            style={{marginBottom: 16}}
+            labelPosition='right'
+          />
+        </CardActions>
+      </CardText>
+    </Card></Paper>
   }
 }

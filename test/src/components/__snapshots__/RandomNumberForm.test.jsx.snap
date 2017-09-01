@@ -4,83 +4,80 @@ exports[`Snapshot: components/RandomNumberForm.jsx with default display function
 <mocked-component
   zDepth={1}
 >
-  <div>
-    <div
-      className="tweak-tools-container"
-    >
-      <p>
-        <label
-          htmlFor="begin-slider"
-        >
-          Begin
-        </label>
-      </p>
-      <mocked-component
-        id="begin-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={0}
-      />
-      <p>
-        <label
-          htmlFor="end-slider"
-        >
-          End
-        </label>
-      </p>
-      <mocked-component
-        id="end-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={13}
-      />
-      <mocked-component
-        checked={true}
-        label="Upper Case"
-        labelPosition="right"
-        onCheck={[Function]}
-        style={
-          Object {
-            "marginBottom": 16,
+  <mocked-component>
+    <mocked-component
+      actAsExpander={true}
+      showExpandableButton={true}
+      subtitle={
+        <RandomNumber
+          display={[Function]}
+          init={[Function]}
+          style={
+            Object {
+              "label": Object {
+                "color": "gray",
+              },
+              "value": Object {
+                "color": "brown",
+                "fontFamily": "monospace",
+                "fontSize": "1.75em",
+              },
+            }
           }
-        }
-      />
-    </div>
-    <div
-      className="output-container"
+        />
+      }
+      title="Random Number"
+    />
+    <mocked-component
+      expandable={true}
     >
       <mocked-component
-        zDepth={0}
+        expandable={true}
       >
-        <span
-          className="label"
+        <p>
+          <label
+            htmlFor="begin-slider"
+          >
+            Begin
+          </label>
+        </p>
+        <mocked-component
+          id="begin-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={0}
+        />
+        <p>
+          <label
+            htmlFor="end-slider"
+          >
+            End
+          </label>
+        </p>
+        <mocked-component
+          id="end-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={13}
+        />
+        <mocked-component
+          checked={true}
+          label="Upper Case"
+          labelPosition="right"
+          onCheck={[Function]}
           style={
             Object {
-              "color": "gray",
+              "marginBottom": 16,
             }
           }
-        >
-          Random Number: 
-        </span>
-        <span
-          className="value"
-          style={
-            Object {
-              "color": "brown",
-              "fontFamily": "monospace",
-              "fontSize": "1.75em",
-            }
-          }
-        >
-          1F9ADD3739635
-        </span>
+        />
       </mocked-component>
-    </div>
-  </div>
+    </mocked-component>
+  </mocked-component>
 </mocked-component>
 `;
 
@@ -88,83 +85,80 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 <mocked-component
   zDepth={1}
 >
-  <div>
-    <div
-      className="tweak-tools-container"
-    >
-      <p>
-        <label
-          htmlFor="begin-slider"
-        >
-          Begin
-        </label>
-      </p>
-      <mocked-component
-        id="begin-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={0}
-      />
-      <p>
-        <label
-          htmlFor="end-slider"
-        >
-          End
-        </label>
-      </p>
-      <mocked-component
-        id="end-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={13}
-      />
-      <mocked-component
-        checked={true}
-        label="Upper Case"
-        labelPosition="right"
-        onCheck={[Function]}
-        style={
-          Object {
-            "marginBottom": 16,
+  <mocked-component>
+    <mocked-component
+      actAsExpander={true}
+      showExpandableButton={true}
+      subtitle={
+        <RandomNumber
+          display={[Function]}
+          init={[Function]}
+          style={
+            Object {
+              "label": Object {
+                "color": "gray",
+              },
+              "value": Object {
+                "color": "brown",
+                "fontFamily": "monospace",
+                "fontSize": "1.75em",
+              },
+            }
           }
-        }
-      />
-    </div>
-    <div
-      className="output-container"
+        />
+      }
+      title="Random Number"
+    />
+    <mocked-component
+      expandable={true}
     >
       <mocked-component
-        zDepth={0}
+        expandable={true}
       >
-        <span
-          className="label"
+        <p>
+          <label
+            htmlFor="begin-slider"
+          >
+            Begin
+          </label>
+        </p>
+        <mocked-component
+          id="begin-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={0}
+        />
+        <p>
+          <label
+            htmlFor="end-slider"
+          >
+            End
+          </label>
+        </p>
+        <mocked-component
+          id="end-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={13}
+        />
+        <mocked-component
+          checked={true}
+          label="Upper Case"
+          labelPosition="right"
+          onCheck={[Function]}
           style={
             Object {
-              "color": "gray",
+              "marginBottom": 16,
             }
           }
-        >
-          Random Number: 
-        </span>
-        <span
-          className="value"
-          style={
-            Object {
-              "color": "brown",
-              "fontFamily": "monospace",
-              "fontSize": "1.75em",
-            }
-          }
-        >
-          1F9ADD3739635
-        </span>
+        />
       </mocked-component>
-    </div>
-  </div>
+    </mocked-component>
+  </mocked-component>
 </mocked-component>
 `;
 
@@ -172,83 +166,80 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 <mocked-component
   zDepth={1}
 >
-  <div>
-    <div
-      className="tweak-tools-container"
-    >
-      <p>
-        <label
-          htmlFor="begin-slider"
-        >
-          Begin
-        </label>
-      </p>
-      <mocked-component
-        id="begin-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={0}
-      />
-      <p>
-        <label
-          htmlFor="end-slider"
-        >
-          End
-        </label>
-      </p>
-      <mocked-component
-        id="end-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={13}
-      />
-      <mocked-component
-        checked={true}
-        label="Upper Case"
-        labelPosition="right"
-        onCheck={[Function]}
-        style={
-          Object {
-            "marginBottom": 16,
+  <mocked-component>
+    <mocked-component
+      actAsExpander={true}
+      showExpandableButton={true}
+      subtitle={
+        <RandomNumber
+          display={[Function]}
+          init={[Function]}
+          style={
+            Object {
+              "label": Object {
+                "color": "gray",
+              },
+              "value": Object {
+                "color": "brown",
+                "fontFamily": "monospace",
+                "fontSize": "1.75em",
+              },
+            }
           }
-        }
-      />
-    </div>
-    <div
-      className="output-container"
+        />
+      }
+      title="Random Number"
+    />
+    <mocked-component
+      expandable={true}
     >
       <mocked-component
-        zDepth={0}
+        expandable={true}
       >
-        <span
-          className="label"
+        <p>
+          <label
+            htmlFor="begin-slider"
+          >
+            Begin
+          </label>
+        </p>
+        <mocked-component
+          id="begin-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={0}
+        />
+        <p>
+          <label
+            htmlFor="end-slider"
+          >
+            End
+          </label>
+        </p>
+        <mocked-component
+          id="end-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={13}
+        />
+        <mocked-component
+          checked={true}
+          label="Upper Case"
+          labelPosition="right"
+          onCheck={[Function]}
           style={
             Object {
-              "color": "gray",
+              "marginBottom": 16,
             }
           }
-        >
-          Random Number: 
-        </span>
-        <span
-          className="value"
-          style={
-            Object {
-              "color": "brown",
-              "fontFamily": "monospace",
-              "fontSize": "1.75em",
-            }
-          }
-        >
-          1F9ADD3739635
-        </span>
+        />
       </mocked-component>
-    </div>
-  </div>
+    </mocked-component>
+  </mocked-component>
 </mocked-component>
 `;
 
@@ -256,83 +247,80 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 <mocked-component
   zDepth={1}
 >
-  <div>
-    <div
-      className="tweak-tools-container"
-    >
-      <p>
-        <label
-          htmlFor="begin-slider"
-        >
-          Begin
-        </label>
-      </p>
-      <mocked-component
-        id="begin-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={0}
-      />
-      <p>
-        <label
-          htmlFor="end-slider"
-        >
-          End
-        </label>
-      </p>
-      <mocked-component
-        id="end-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={13}
-      />
-      <mocked-component
-        checked={true}
-        label="Upper Case"
-        labelPosition="right"
-        onCheck={[Function]}
-        style={
-          Object {
-            "marginBottom": 16,
+  <mocked-component>
+    <mocked-component
+      actAsExpander={true}
+      showExpandableButton={true}
+      subtitle={
+        <RandomNumber
+          display={[Function]}
+          init={[Function]}
+          style={
+            Object {
+              "label": Object {
+                "color": "gray",
+              },
+              "value": Object {
+                "color": "brown",
+                "fontFamily": "monospace",
+                "fontSize": "1.75em",
+              },
+            }
           }
-        }
-      />
-    </div>
-    <div
-      className="output-container"
+        />
+      }
+      title="Random Number"
+    />
+    <mocked-component
+      expandable={true}
     >
       <mocked-component
-        zDepth={0}
+        expandable={true}
       >
-        <span
-          className="label"
+        <p>
+          <label
+            htmlFor="begin-slider"
+          >
+            Begin
+          </label>
+        </p>
+        <mocked-component
+          id="begin-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={0}
+        />
+        <p>
+          <label
+            htmlFor="end-slider"
+          >
+            End
+          </label>
+        </p>
+        <mocked-component
+          id="end-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={13}
+        />
+        <mocked-component
+          checked={true}
+          label="Upper Case"
+          labelPosition="right"
+          onCheck={[Function]}
           style={
             Object {
-              "color": "gray",
+              "marginBottom": 16,
             }
           }
-        >
-          Random Number: 
-        </span>
-        <span
-          className="value"
-          style={
-            Object {
-              "color": "brown",
-              "fontFamily": "monospace",
-              "fontSize": "1.75em",
-            }
-          }
-        >
-          1F9ADD3739635
-        </span>
+        />
       </mocked-component>
-    </div>
-  </div>
+    </mocked-component>
+  </mocked-component>
 </mocked-component>
 `;
 
@@ -340,83 +328,80 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 <mocked-component
   zDepth={1}
 >
-  <div>
-    <div
-      className="tweak-tools-container"
-    >
-      <p>
-        <label
-          htmlFor="begin-slider"
-        >
-          Begin
-        </label>
-      </p>
-      <mocked-component
-        id="begin-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={0}
-      />
-      <p>
-        <label
-          htmlFor="end-slider"
-        >
-          End
-        </label>
-      </p>
-      <mocked-component
-        id="end-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={13}
-      />
-      <mocked-component
-        checked={true}
-        label="Upper Case"
-        labelPosition="right"
-        onCheck={[Function]}
-        style={
-          Object {
-            "marginBottom": 16,
+  <mocked-component>
+    <mocked-component
+      actAsExpander={true}
+      showExpandableButton={true}
+      subtitle={
+        <RandomNumber
+          display={[Function]}
+          init={[Function]}
+          style={
+            Object {
+              "label": Object {
+                "color": "gray",
+              },
+              "value": Object {
+                "color": "brown",
+                "fontFamily": "monospace",
+                "fontSize": "1.75em",
+              },
+            }
           }
-        }
-      />
-    </div>
-    <div
-      className="output-container"
+        />
+      }
+      title="Random Number"
+    />
+    <mocked-component
+      expandable={true}
     >
       <mocked-component
-        zDepth={0}
+        expandable={true}
       >
-        <span
-          className="label"
+        <p>
+          <label
+            htmlFor="begin-slider"
+          >
+            Begin
+          </label>
+        </p>
+        <mocked-component
+          id="begin-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={0}
+        />
+        <p>
+          <label
+            htmlFor="end-slider"
+          >
+            End
+          </label>
+        </p>
+        <mocked-component
+          id="end-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={13}
+        />
+        <mocked-component
+          checked={true}
+          label="Upper Case"
+          labelPosition="right"
+          onCheck={[Function]}
           style={
             Object {
-              "color": "gray",
+              "marginBottom": 16,
             }
           }
-        >
-          Random Number: 
-        </span>
-        <span
-          className="value"
-          style={
-            Object {
-              "color": "brown",
-              "fontFamily": "monospace",
-              "fontSize": "1.75em",
-            }
-          }
-        >
-          1F9ADD3739635
-        </span>
+        />
       </mocked-component>
-    </div>
-  </div>
+    </mocked-component>
+  </mocked-component>
 </mocked-component>
 `;
 
@@ -424,82 +409,79 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 <mocked-component
   zDepth={1}
 >
-  <div>
-    <div
-      className="tweak-tools-container"
-    >
-      <p>
-        <label
-          htmlFor="begin-slider"
-        >
-          Begin
-        </label>
-      </p>
-      <mocked-component
-        id="begin-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={0}
-      />
-      <p>
-        <label
-          htmlFor="end-slider"
-        >
-          End
-        </label>
-      </p>
-      <mocked-component
-        id="end-slider"
-        max={13}
-        min={0}
-        onChange={[Function]}
-        step={1}
-        value={13}
-      />
-      <mocked-component
-        checked={true}
-        label="Upper Case"
-        labelPosition="right"
-        onCheck={[Function]}
-        style={
-          Object {
-            "marginBottom": 16,
+  <mocked-component>
+    <mocked-component
+      actAsExpander={true}
+      showExpandableButton={true}
+      subtitle={
+        <RandomNumber
+          display={[Function]}
+          init={[Function]}
+          style={
+            Object {
+              "label": Object {
+                "color": "gray",
+              },
+              "value": Object {
+                "color": "brown",
+                "fontFamily": "monospace",
+                "fontSize": "1.75em",
+              },
+            }
           }
-        }
-      />
-    </div>
-    <div
-      className="output-container"
+        />
+      }
+      title="Random Number"
+    />
+    <mocked-component
+      expandable={true}
     >
       <mocked-component
-        zDepth={0}
+        expandable={true}
       >
-        <span
-          className="label"
+        <p>
+          <label
+            htmlFor="begin-slider"
+          >
+            Begin
+          </label>
+        </p>
+        <mocked-component
+          id="begin-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={0}
+        />
+        <p>
+          <label
+            htmlFor="end-slider"
+          >
+            End
+          </label>
+        </p>
+        <mocked-component
+          id="end-slider"
+          max={13}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          value={13}
+        />
+        <mocked-component
+          checked={true}
+          label="Upper Case"
+          labelPosition="right"
+          onCheck={[Function]}
           style={
             Object {
-              "color": "gray",
+              "marginBottom": 16,
             }
           }
-        >
-          Random Number: 
-        </span>
-        <span
-          className="value"
-          style={
-            Object {
-              "color": "brown",
-              "fontFamily": "monospace",
-              "fontSize": "1.75em",
-            }
-          }
-        >
-          1F9ADD3739635
-        </span>
+        />
       </mocked-component>
-    </div>
-  </div>
+    </mocked-component>
+  </mocked-component>
 </mocked-component>
 `;
