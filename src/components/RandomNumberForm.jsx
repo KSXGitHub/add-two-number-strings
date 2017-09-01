@@ -48,6 +48,7 @@ export default class RandomNumberForm extends React.Component {
           fontSize: '1.75em'
         }
       }}
+      label={null}
     />
 
     return <Paper zDepth={1}><Card>

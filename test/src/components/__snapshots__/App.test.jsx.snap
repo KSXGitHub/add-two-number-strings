@@ -24,6 +24,7 @@ exports[`Snapshot: components/App.jsx 1`] = `
             <RandomNumber
               display={[Function]}
               init={[Function]}
+              label={null}
               style={
                 Object {
                   "label": Object {

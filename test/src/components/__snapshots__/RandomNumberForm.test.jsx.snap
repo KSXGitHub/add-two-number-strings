@@ -12,6 +12,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with default display function
         <RandomNumber
           display={[Function]}
           init={[Function]}
+          label={null}
           style={
             Object {
               "label": Object {
@@ -93,6 +94,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         <RandomNumber
           display={[Function]}
           init={[Function]}
+          label={null}
           style={
             Object {
               "label": Object {
@@ -174,6 +176,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         <RandomNumber
           display={[Function]}
           init={[Function]}
+          label={null}
           style={
             Object {
               "label": Object {
@@ -255,6 +258,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         <RandomNumber
           display={[Function]}
           init={[Function]}
+          label={null}
           style={
             Object {
               "label": Object {
@@ -336,6 +340,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         <RandomNumber
           display={[Function]}
           init={[Function]}
+          label={null}
           style={
             Object {
               "label": Object {
@@ -417,6 +422,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
         <RandomNumber
           display={[Function]}
           init={[Function]}
+          label={null}
           style={
             Object {
               "label": Object {
