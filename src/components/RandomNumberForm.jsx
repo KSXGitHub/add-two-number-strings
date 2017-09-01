@@ -35,7 +35,7 @@ export default class RandomNumberForm extends React.Component {
     ) || this.state.defaultContent
 
     return <Paper zDepth={1}><div>
-      <div className='text-field-container'>
+      <div className='tweak-tools-container'>
         <p>
           <label htmlFor='begin-slider'>Begin</label>
         </p>

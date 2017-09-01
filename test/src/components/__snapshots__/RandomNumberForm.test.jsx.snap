@@ -6,7 +6,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with default display function
 >
   <div>
     <div
-      className="text-field-container"
+      className="tweak-tools-container"
     >
       <p>
         <label
@@ -90,7 +90,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 >
   <div>
     <div
-      className="text-field-container"
+      className="tweak-tools-container"
     >
       <p>
         <label
@@ -174,7 +174,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 >
   <div>
     <div
-      className="text-field-container"
+      className="tweak-tools-container"
     >
       <p>
         <label
@@ -258,7 +258,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 >
   <div>
     <div
-      className="text-field-container"
+      className="tweak-tools-container"
     >
       <p>
         <label
@@ -342,7 +342,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 >
   <div>
     <div
-      className="text-field-container"
+      className="tweak-tools-container"
     >
       <p>
         <label
@@ -426,7 +426,7 @@ exports[`Snapshot: components/RandomNumberForm.jsx with specified display functi
 >
   <div>
     <div
-      className="text-field-container"
+      className="tweak-tools-container"
     >
       <p>
         <label
