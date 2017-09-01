@@ -1,4 +1,5 @@
 import './__lib__/material-ui-mocks.jsx'
+import '../../../lib/native-js-mocks'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Clock from '../../../src/components/Clock.jsx'
