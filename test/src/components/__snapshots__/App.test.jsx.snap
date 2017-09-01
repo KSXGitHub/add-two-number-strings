@@ -20,13 +20,32 @@ exports[`Snapshot: components/App.jsx 1`] = `
         <div
           className="text-field-container"
         >
+          <p>
+            <label
+              htmlFor="begin-slider"
+            >
+              Begin
+            </label>
+          </p>
           <mocked-component
-            hintText="From..."
+            id="begin-slider"
+            max={13}
+            min={0}
             onChange={[Function]}
+            step={1}
             value={0}
           />
+          <p>
+            <label
+              htmlFor="end-slider"
+            >
+              End
+            </label>
+          </p>
           <mocked-component
-            hintText="To..."
+            id="end-slider"
+            max={13}
+            min={0}
             onChange={[Function]}
             value={13}
           />

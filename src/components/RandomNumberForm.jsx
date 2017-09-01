@@ -56,7 +56,7 @@ export default class RandomNumberForm extends React.Component {
         <Slider
           id='end-slider'
           min={this.state.begin}
-          max={13}
+          max={this.state.begin === 13 ? 14 : 13}
           value={this.state.end}
           onChange={(_, end) => this.setState({end})}
         />
