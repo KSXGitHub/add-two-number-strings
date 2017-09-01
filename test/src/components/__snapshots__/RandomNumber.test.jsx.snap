@@ -8,7 +8,8 @@ exports[`Snapshot: components/RandomNumber.jsx with default display function 1`]
     className="label"
     style={Object {}}
   >
-    Random Number: 
+    Random Number
+    : 
   </span>
   <span
     className="value"
@@ -27,7 +28,8 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 1
     className="label"
     style={Object {}}
   >
-    Random Number: 
+    Random Number
+    : 
   </span>
   <span
     className="value"
@@ -46,7 +48,8 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 2
     className="label"
     style={Object {}}
   >
-    Random Number: 
+    Random Number
+    : 
   </span>
   <span
     className="value"
@@ -65,7 +68,8 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 3
     className="label"
     style={Object {}}
   >
-    Random Number: 
+    Random Number
+    : 
   </span>
   <span
     className="value"
@@ -84,7 +88,8 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 4
     className="label"
     style={Object {}}
   >
-    Random Number: 
+    Random Number
+    : 
   </span>
   <span
     className="value"
@@ -103,7 +108,8 @@ exports[`Snapshot: components/RandomNumber.jsx with specified display function 5
     className="label"
     style={Object {}}
   >
-    Random Number: 
+    Random Number
+    : 
   </span>
   <span
     className="value"
