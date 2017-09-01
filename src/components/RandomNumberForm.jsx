@@ -1,6 +1,6 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
-import TextField from 'material-ui/TextField'
+import Slider from 'material-ui/Slider'
 import Checkbox from 'material-ui/Checkbox'
 import RandomNumber from './RandomNumber.jsx'
 
@@ -36,23 +36,29 @@ export default class RandomNumberForm extends React.Component {
 
     return <Paper zDepth={1}><div>
       <div className='text-field-container'>
-        <TextField
-          hintText='From...'
+        <p>
+          <label htmlFor='begin-slider'>Begin</label>
+        </p>
+
+        <Slider
+          id='begin-slider'
+          min={0}
+          max={this.state.end}
+          step={1}
           value={this.state.begin}
-          onChange={(_, value) => {
-            const begin = parseInt(value || 0)
-            console.log({begin})
-            if (isFinite(begin) && begin >= 0 && begin <= this.state.end) this.setState({begin})
-          }}
+          onChange={(_, begin) => this.setState({begin})}
         />
 
-        <TextField
-          hintText='To...'
+        <p>
+          <label htmlFor='end-slider'>End</label>
+        </p>
+
+        <Slider
+          id='end-slider'
+          min={this.state.begin}
+          max={13}
           value={this.state.end}
-          onChange={(_, value) => {
-            const end = parseInt(value || 0)
-            if (isFinite(end) && end <= 13 && end >= this.state.begin) this.setState({end})
-          }}
+          onChange={(_, end) => this.setState({end})}
         />
 
         <Checkbox
