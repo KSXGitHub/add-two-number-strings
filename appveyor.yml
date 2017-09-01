@@ -6,6 +6,12 @@ environment:
   matrix:
     - nodejs_version: 8
 
+cache:
+  - '%USERPROFILE%\.nuget\packages'
+  - '%APPDATA%\npm'
+  - '%APPDATA%\npm-cache'
+  - node_modules
+
 image: Visual Studio 2015
 
 clone_folder: C:\Projects\Main
