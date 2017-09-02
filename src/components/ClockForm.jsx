@@ -107,19 +107,6 @@ export default class ClockForm extends React.Component {
   }
 
   getFormattingMethod (method = this.state.formattingMethod) {
-    const mkerror = error => (
-      <code
-        className='error'
-        data-error={error}
-        style={{
-          fontFamily: 'monospace',
-          color: 'red'
-        }}
-      >
-        {error.message}
-      </code>
-    )
-
     switch (method) {
       case 'javascript-expression': {
         try {
@@ -129,7 +116,7 @@ export default class ClockForm extends React.Component {
             ? date => String(jtry(() => result()))
             : () => 'TypeError: Script must return a function'
         } catch (error) {
-          return () => mkerror(error.message)
+          return () => error.message
         }
       }
 
@@ -144,7 +131,7 @@ export default class ClockForm extends React.Component {
             const {locale, options} = JSON.parse(this.state.toStringMethodArguments)
             return date[this.state.toStringMethodName](locale, options)
           } catch (error) {
-            return mkerror(error.message)
+            return error.message
           }
         }
       }
