@@ -113,7 +113,7 @@ export default class ClockForm extends React.Component {
           const script = new vm.Script(this.state.formattingExpression)
           const result = script.runInNewContext({moment})
           return typeof result === 'function'
-            ? date => String(jtry(() => result()))
+            ? date => String(jtry(() => result(date)))
             : () => 'TypeError: Script must return a function'
         } catch (error) {
           return () => error.message
