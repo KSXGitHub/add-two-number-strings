@@ -4,7 +4,8 @@ import '../../../../lib/native-js-mocks'
 function createMockedComponent () {
   return class MockedComponent extends React.Component {
     render () {
-      return <mocked-component {...this.props} />
+      const {children, ...props} = this
+      return <mocked-component {...props}>{children}</mocked-component>
     }
   }
 }
