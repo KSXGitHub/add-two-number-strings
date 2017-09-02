@@ -1,5 +1,8 @@
 import React from 'react'
 
+const DEFAULT_WRAP = props => (<span {...props} />)
+const DEFAULT_CONTENT = date => date.toTimeString()
+
 export default class Clock extends React.Component {
   constructor (props) {
     super(props)
@@ -7,8 +10,8 @@ export default class Clock extends React.Component {
     const {
       refreshRate = 1000,
       format: {
-        wrap: Wrap = props => (<span {...props} />),
-        content: getContent = date => date.toTimeString()
+        wrap: Wrap = DEFAULT_WRAP,
+        content: getContent = DEFAULT_CONTENT
       } = {},
       display = date => (<Wrap>{getContent(date)}</Wrap>)
     } = props
