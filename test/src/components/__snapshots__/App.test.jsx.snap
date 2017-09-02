@@ -2,126 +2,144 @@
 
 exports[`Snapshot: components/App.jsx 1`] = `
 <mocked-component
-  muiTheme={
-    Object {
-      "theme": undefined,
+  _reactInternalInstance={
+    ReactCompositeComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <MockedComponent
+        muiTheme={
+            Object {
+                "theme": undefined,
+              }
+        }
+    >
+        <div>
+            <MockedComponent
+                showMenuIconButton={false}
+                title="Hello, World!!"
+            />
+            <RandomNumberForm
+                init={[Function]}
+            />
+            <ClockForm />
+        </div>
+    </MockedComponent>,
+      "_hostContainerInfo": Object {
+        "createNodeMock": [Function],
+      },
+      "_hostParent": null,
+      "_instance": MockedComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "children": <div>
+            <MockedComponent
+                    showMenuIconButton={false}
+                    title="Hello, World!!"
+            />
+            <RandomNumberForm
+                    init={[Function]}
+            />
+            <ClockForm />
+    </div>,
+          "muiTheme": Object {
+            "theme": undefined,
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountImage": null,
+      "_mountIndex": 0,
+      "_mountOrder": 4,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": <mocked-component
+        _reactInternalInstance={[Circular]}
+        context={Object {}}
+        props={
+            Object {
+                "children": <div>
+                  <MockedComponent
+                        showMenuIconButton={false}
+                        title="Hello, World!!"
+                  />
+                  <RandomNumberForm
+                        init={[Function]}
+                  />
+                  <ClockForm />
+            </div>,
+                "muiTheme": Object {
+                  "theme": undefined,
+                },
+              }
+        }
+        refs={Object {}}
+        state={null}
+        updater={
+            Object {
+                "enqueueCallback": [Function],
+                "enqueueCallbackInternal": [Function],
+                "enqueueElementInternal": [Function],
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+                "validateCallback": [Function],
+              }
+        }
+    />,
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
     }
   }
->
-  <div>
-    <mocked-component
-      showMenuIconButton={false}
-      title="Hello, World!!"
-    />
-    <mocked-component
-      zDepth={1}
-    >
-      <mocked-component>
-        <mocked-component
-          actAsExpander={true}
-          showExpandableButton={true}
-          subtitle="Click to expand tweak tools"
-          title="Random Number"
+  context={Object {}}
+  props={
+    Object {
+      "children": <div>
+        <MockedComponent
+            showMenuIconButton={false}
+            title="Hello, World!!"
         />
-        <mocked-component
-          expandable={true}
-        >
-          <mocked-component
-            expandable={true}
-          >
-            <p>
-              <label
-                htmlFor="begin-slider"
-              >
-                Begin
-              </label>
-            </p>
-            <mocked-component
-              id="begin-slider"
-              max={13}
-              min={0}
-              onChange={[Function]}
-              step={1}
-              value={0}
-            />
-            <p>
-              <label
-                htmlFor="end-slider"
-              >
-                End
-              </label>
-            </p>
-            <mocked-component
-              id="end-slider"
-              max={13}
-              min={0}
-              onChange={[Function]}
-              step={1}
-              value={13}
-            />
-            <mocked-component
-              checked={true}
-              label="Upper Case"
-              labelPosition="right"
-              onCheck={[Function]}
-              style={
-                Object {
-                  "marginBottom": 16,
-                }
-              }
-            />
-          </mocked-component>
-        </mocked-component>
-        <mocked-component>
-          <mocked-component
-            zDepth={0}
-          >
-            <span
-              className="value"
-              style={
-                Object {
-                  "color": "brown",
-                  "fontFamily": "monospace",
-                  "fontSize": "1.75em",
-                }
-              }
-            >
-              1F9ADD3739635
-            </span>
-          </mocked-component>
-        </mocked-component>
-      </mocked-component>
-    </mocked-component>
-    <mocked-component
-      zDepth={1}
-    >
-      <mocked-component>
-        <mocked-component
-          actAsExpander={true}
-          showExpandableButton={true}
-          subtitle="Click to customize clock"
-          title="Clock"
+        <RandomNumberForm
+            init={[Function]}
         />
-        <mocked-component
-          expandable={true}
-        >
-          <mocked-component
-            floatingLabelText="Formatting method"
-            value={undefined}
-          >
-            <mocked-component
-              primaryText="Hello World 123 Foo Bar"
-              value="hello-world-123-foo-bar"
-            />
-          </mocked-component>
-        </mocked-component>
-        <mocked-component>
-          <span>
-            12:00:00 AM
-          </span>
-        </mocked-component>
-      </mocked-component>
-    </mocked-component>
-  </div>
-</mocked-component>
+        <ClockForm />
+    </div>,
+      "muiTheme": Object {
+        "theme": undefined,
+      },
+    }
+  }
+  refs={Object {}}
+  state={null}
+  updater={
+    Object {
+      "enqueueCallback": [Function],
+      "enqueueCallbackInternal": [Function],
+      "enqueueElementInternal": [Function],
+      "enqueueForceUpdate": [Function],
+      "enqueueReplaceState": [Function],
+      "enqueueSetState": [Function],
+      "isMounted": [Function],
+      "validateCallback": [Function],
+    }
+  }
+/>
 `;
