@@ -39,7 +39,9 @@ function createMockedComponentSuite (moduleName) {
   'material-ui/Toggle',
   'material-ui/Checkbox',
   'material-ui/Slider',
-  'material-ui/Card'
+  'material-ui/Card',
+  'material-ui/SelectField',
+  'material-ui/MenuItem'
 ].forEach(moduleName =>
   jest.doMock(moduleName, createMockedComponentSuite(moduleName))
 )
