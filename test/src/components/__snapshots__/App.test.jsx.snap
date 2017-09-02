@@ -92,6 +92,36 @@ exports[`Snapshot: components/App.jsx 1`] = `
         </mocked-component>
       </mocked-component>
     </mocked-component>
+    <mocked-component
+      zDepth={1}
+    >
+      <mocked-component>
+        <mocked-component
+          actAsExpander={true}
+          showExpandableButton={true}
+          subtitle="Click to customize clock"
+          title="Clock"
+        />
+        <mocked-component
+          expandable={true}
+        >
+          <mocked-component
+            floatingLabelText="Formatting method"
+            value={undefined}
+          >
+            <mocked-component
+              primaryText="Hello World 123 Foo Bar"
+              value="hello-world-123-foo-bar"
+            />
+          </mocked-component>
+        </mocked-component>
+        <mocked-component>
+          <span>
+            12:00:00 AM
+          </span>
+        </mocked-component>
+      </mocked-component>
+    </mocked-component>
   </div>
 </mocked-component>
 `;
