@@ -4,9 +4,14 @@
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "just-try": "^2.0.1",
     "material-ui": "^0.19.0",
+    "moment": "^2.18.1",
+    "product-iterable": "^3.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-monaco-editor": "^0.10.0",
     "standard-loader": "^6.0.1"
   },
   "devDependencies": {
@@ -35,9 +40,11 @@
     "x-iterable": "^6.0.1"
   },
   "optionalDependencies": {
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.0",
+    "localtunnel": "^1.8.3"
   },
   "scripts": {
+    "localtunnel": "lt",
     "live-server": "live-server",
     "serve-dist": "live-server dist",
     "serve-coverage": "live-server coverage/lcov-report",
@@ -52,6 +59,12 @@
     "webpack": "webpack",
     "webpack-watch": "webpack --watch -d",
     "start": "webpack-dev-server",
+    "sh": "sh",
+    "bash": "bash",
+    "zsh": "zsh",
+    "command-prompt": "cmd",
+    "exec": "bash -c",
+    "exec:win32": "cmd /c",
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
     "clean-artifacts": "bash 'sh/clean-artifacts.sh'",

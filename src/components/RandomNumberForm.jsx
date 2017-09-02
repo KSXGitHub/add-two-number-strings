@@ -1,6 +1,7 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
-import TextField from 'material-ui/TextField'
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
+import Slider from 'material-ui/Slider'
 import Checkbox from 'material-ui/Checkbox'
 import RandomNumber from './RandomNumber.jsx'
 
@@ -34,30 +35,53 @@ export default class RandomNumberForm extends React.Component {
       )[this.state.uppercase ? 'toUpperCase' : 'toLowerCase']()
     ) || this.state.defaultContent
 
-    return <Paper zDepth={1}><div>
-      <div className='text-field-container'>
-        <TextField
-          hintText='From...'
-          value={this.state.begin}
-          onChange={(_, begin) => this.setState({begin})}
-        />
+    return <Paper zDepth={1}><Card>
+      <CardHeader
+        title='Random Number'
+        subtitle='Click to expand tweak tools'
+        actAsExpander
+        showExpandableButton
+      />
 
-        <TextField
-          hintText='To...'
-          value={this.state.end}
-          onChange={(_, end) => this.setState({end})}
-        />
+      <CardText expandable>
+        <CardActions expandable>
+          <p>
+            <label htmlFor='begin-slider'>Begin</label>
+          </p>
 
-        <Checkbox
-          label='UpperCase'
-          checked={this.state.uppercase}
-          onCheck={(_, uppercase) => this.setState({uppercase})}
-          style={{marginBottom: 16}}
-          labelPosition='right'
-        />
-      </div>
+          <Slider
+            id='begin-slider'
+            min={0}
+            max={this.state.end}
+            step={1}
+            value={this.state.begin}
+            onChange={(_, begin) => begin < this.state.end && this.setState({begin})}
+          />
 
-      <div className='output-container'>
+          <p>
+            <label htmlFor='end-slider'>End</label>
+          </p>
+
+          <Slider
+            id='end-slider'
+            min={this.state.begin}
+            max={13}
+            step={1}
+            value={this.state.end}
+            onChange={(_, end) => end > this.state.begin && this.setState({end})}
+          />
+
+          <Checkbox
+            label='Upper Case'
+            checked={this.state.uppercase}
+            onCheck={(_, uppercase) => this.setState({uppercase})}
+            style={{marginBottom: 16}}
+            labelPosition='right'
+          />
+        </CardActions>
+      </CardText>
+
+      <CardText>
         <RandomNumber
           display={getText}
           init={this.state.init}
@@ -71,8 +95,9 @@ export default class RandomNumberForm extends React.Component {
               fontSize: '1.75em'
             }
           }}
+          label={null}
         />
-      </div>
-    </div></Paper>
+      </CardText>
+    </Card></Paper>
   }
 }

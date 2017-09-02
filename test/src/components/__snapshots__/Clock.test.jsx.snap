@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot: components/Clock.jsx props = {} 1`] = `
+<span>
+  12:00:00 AM
+</span>
+`;
+
+exports[`Snapshot: components/Clock.jsx props = {display} 1`] = `
+<p>
+  12:00:00 AM
+</p>
+`;
+
+exports[`Snapshot: components/Clock.jsx props.format = {content} 1`] = `
+<span>
+  12:00:00 AM
+</span>
+`;
+
+exports[`Snapshot: components/Clock.jsx props.format = {wrap, content} 1`] = `
+<p>
+  12:00:00 AM
+</p>
+`;
+
+exports[`Snapshot: components/Clock.jsx props.format = {wrap} 1`] = `
+<p>
+  12:00:00 AM
+</p>
+`;
