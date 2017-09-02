@@ -4,7 +4,8 @@ import '../../../../lib/native-js-mocks'
 function createMockedComponent () {
   return class MockedComponent extends React.Component {
     render () {
-      return <mocked-component {...this.props} />
+      const {children, ...props} = this
+      return <mocked-component {...props}>{children}</mocked-component>
     }
   }
 }
@@ -39,7 +40,10 @@ function createMockedComponentSuite (moduleName) {
   'material-ui/Toggle',
   'material-ui/Checkbox',
   'material-ui/Slider',
-  'material-ui/Card'
+  'material-ui/Card',
+  'material-ui/SelectField',
+  'material-ui/MenuItem',
+  'material-ui/Tabs'
 ].forEach(moduleName =>
   jest.doMock(moduleName, createMockedComponentSuite(moduleName))
 )
