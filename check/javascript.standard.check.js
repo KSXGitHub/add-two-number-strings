@@ -19,6 +19,7 @@ SKIP_CODE_STYLE_CHECKING !== 'true' && test('JavaScript Code Style: StandardJS',
   expect(argv).toBeInstanceOf(Array)
 
   const {stdout, stderr, status} = spawnSync(STANDARDJS_EXECUTABLE || 'standard', argv, {cwd: wdir})
+
   if (status) {
     if (stdout === null) console.warn('standard.stdout is null')
     if (stderr === null) console.warn('standard.stderr is null')
