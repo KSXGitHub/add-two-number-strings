@@ -34,8 +34,8 @@ export default class NamedRadixes extends React.Component {
       value={radix}
       namedValues={namedValues}
       onChange={radix => {
-        this.setState({radix})
         this.state.onChange(radix)
+        this.setState({radix})
       }}
       {...rest}
     />
