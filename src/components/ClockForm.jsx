@@ -17,7 +17,7 @@ export default class ClockForm extends React.Component {
     super(props)
 
     const {
-      formattingMethod = 'javascript-expression',
+      formattingMethod = 'native-to-string',
       formattingExpression = `date => {\n  return moment(date).format('LLLL')\n}`,
       momentTemplateString = 'dddd — YYYY MMMM D — h:mm:ss a',
       toStringMethodName = 'toLocaleTimeString',
