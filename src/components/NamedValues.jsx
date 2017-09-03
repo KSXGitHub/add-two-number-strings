@@ -31,7 +31,7 @@ export default class NamedValues extends React.Component {
   render () {
     const Container = this.state.container
 
-    const onChange = (_, value) => {
+    const onChange = value => {
       let prevent = false
 
       this.state.onChange(value, {
@@ -47,14 +47,14 @@ export default class NamedValues extends React.Component {
       <div><TextField
         name='anonymous-value'
         value={this.state.value}
-        onChange={onChange}
+        onChange={(_, value) => onChange(value)}
         {...this.state.textFieldProps}
       /></div>
 
       <div><SelectField
         name='named-value'
         value={this.state.value}
-        onChange={onChange}
+        onChange={(_, __, value) => onChange(value)}
         {...this.state.selectFieldProps}
       >{
         Array.from(this.state.namedValues)
