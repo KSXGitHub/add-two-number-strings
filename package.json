@@ -29,14 +29,22 @@
     "jest": "^20.0.4",
     "js-yaml": "^3.9.1",
     "react-test-renderer": "^15.6.1",
-    "standard": "10.0.2",
+    "standard": "^10.0.3",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1",
     "x-iterable": "^6.0.1"
   },
+  "optionalDependencies": {
+    "live-server": "^1.2.0",
+    "localtunnel": "^1.8.3"
+  },
   "scripts": {
     "gh-pages": "bash sh/gh-pages.sh",
+    "localtunnel": "lt",
+    "live-server": "live-server",
+    "serve-dist": "live-server dist",
+    "serve-coverage": "live-server coverage/lcov-report",
     "browser": "bash sh/browser.sh",
     "browse-local-fs": "bash sh/browse-local-fs.sh",
     "view-coverage": "bash sh/view-coverage.sh",
@@ -45,6 +53,8 @@
     "unit-test": "bash sh/jest.sh",
     "unit-test-watch": "bash sh/jest.sh --watch",
     "unit-test-coverage": "bash sh/test-coverage.sh",
+    "webpack": "webpack",
+    "webpack-watch": "webpack --watch -d",
     "start": "webpack-dev-server",
     "sh": "sh",
     "bash": "bash",
