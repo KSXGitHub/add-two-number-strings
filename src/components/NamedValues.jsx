@@ -30,6 +30,7 @@ export default class NamedValues extends React.Component {
 
   render () {
     const Container = this.state.container
+
     const onChange = (_, value) => {
       let prevent = false
 
