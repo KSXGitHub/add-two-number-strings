@@ -22,9 +22,10 @@ test('JavaScript Code Style: StandardJS', () => {
 
   const {stdout, stderr, status} = spawnSync(STANDARDJS_EXECUTABLE || 'standard', argv, {cwd: wdir})
 
+  if (stdout === null) console.warn('standard.stdout is null')
+  if (stderr === null) console.warn('standard.stderr is null')
+
   if (status) {
-    if (stdout === null) console.warn('standard.stdout is null')
-    if (stderr === null) console.warn('standard.stderr is null')
     throw new Error(stderr + '\n' + stdout)
   }
 })
