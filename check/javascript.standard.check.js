@@ -24,12 +24,6 @@ test('JavaScript Code Style: StandardJS', () => {
 
   if (stdout === null) console.warn('standard.stdout is null')
   if (stderr === null) console.warn('standard.stderr is null')
-
-  if (error) {
-    throw error
-  }
-
-  if (status) {
-    throw new Error(stderr + '\n' + stdout)
-  }
+  if (error) throw error
+  if (status) throw new Error(stderr + '\n' + stdout)
 })
