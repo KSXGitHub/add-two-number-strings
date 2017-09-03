@@ -105,12 +105,12 @@ export default class RandomNumberForm extends React.Component {
         <RandomNumber
           display={float => jtry(
             () => getText(float),
-            error => <span
+            error => (<span
               className='error'
               style={{color: 'red', fontSize: '0.75em'}}
             >
               {error.message}
-            </span>
+            </span>)
           )}
           init={this.state.init}
           style={{
