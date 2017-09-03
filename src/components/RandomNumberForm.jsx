@@ -5,6 +5,7 @@ import Slider from 'material-ui/Slider'
 import Checkbox from 'material-ui/Checkbox'
 import RandomNumber from './RandomNumber.jsx'
 import NamedRadixes from './NamedRadixes.jsx'
+import jtry from 'just-try'
 
 export default class RandomNumberForm extends React.Component {
   constructor (props) {
@@ -102,7 +103,15 @@ export default class RandomNumberForm extends React.Component {
 
       <CardText>
         <RandomNumber
-          display={getText}
+          display={float => jtry(
+            () => getText(float),
+            error => <span
+              className='error'
+              style={{color: 'red', fontSize: '0.75em'}}
+            >
+              {error.message}
+            </span>
+          )}
           init={this.state.init}
           style={{
             label: {
