@@ -85,6 +85,7 @@ export default class ClockForm extends React.Component {
                 .map(([locale, datetime]) => `to${locale}${datetime}String`)
                 .map(fname => (<MenuItem value={fname} primaryText={`.${fname}()`} />))
             )}</div>
+
             <MonacoEditor
               height='150'
               language='json'
