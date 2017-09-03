@@ -27,7 +27,7 @@ export default class NamedRadixes extends React.Component {
 
     const namedValues = new Map()
     for (const radix in names) {
-      namedValues.set(radix, names[radix])
+      namedValues.set(Number(radix), names[radix])
     }
 
     return <NamedValues
