@@ -11,7 +11,9 @@ const {
 
 const wdir = path.resolve(__dirname, '..')
 
-SKIP_CODE_STYLE_CHECKING === 'true' || test('JavaScript Code Style: StandardJS', () => {
+test('JavaScript Code Style: StandardJS', () => {
+  if (SKIP_CODE_STYLE_CHECKING === 'true') return
+
   const argv = STANDARDJS_ARGV
     ? JSON.parse(STANDARDJS_ARGV)
     : []
