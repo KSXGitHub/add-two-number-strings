@@ -7,7 +7,7 @@ ghpages.publish(
   resolve(__dirname, '../../dist'),
   {
     dotfiles: true,
-    message: 'Update message using gh-pages'
+    message: 'Update using gh-pages'
   },
   error => {
     if (!error) return
