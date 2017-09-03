@@ -64,6 +64,7 @@ export default class ClockForm extends React.Component {
               onChange={value => this.setState({formattingExpression: value})}
             />
           </Tab>
+
           <Tab label='Moment.js' value='momentjs'>
             <TextField
               hintText='Moment.js Date/Time Format'
@@ -71,6 +72,7 @@ export default class ClockForm extends React.Component {
               onChange={(_, value) => this.setState({momentTemplateString: value})}
             />
           </Tab>
+
           <Tab label='Native toString function' value='native-to-string'>
             <div>{React.createElement(
               SelectField,
@@ -91,6 +93,7 @@ export default class ClockForm extends React.Component {
               onChange={value => this.setState({toStringMethodArguments: value})}
             />
           </Tab>
+
           <Tab label='UNIX Timestamp' value='timestamp' />
         </Tabs>
       </CardActions>
