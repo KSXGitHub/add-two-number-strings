@@ -4,6 +4,7 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import Slider from 'material-ui/Slider'
 import Checkbox from 'material-ui/Checkbox'
 import RandomNumber from './RandomNumber.jsx'
+import NamedRadixes from './NamedRadixes.jsx'
 
 export default class RandomNumberForm extends React.Component {
   constructor (props) {
@@ -78,6 +79,19 @@ export default class RandomNumberForm extends React.Component {
             style={{marginBottom: 16}}
             labelPosition='right'
           />
+
+          <div className='radix-container'>
+            <p>Radix</p>
+            <NamedRadixes
+              textFieldProps={{
+                hintText: 'Enter radix number...'
+              }}
+
+              selectFieldProps={{
+                floatingLabelText: 'Radix name'
+              }}
+            />
+          </div>
         </CardActions>
       </CardText>
 
