@@ -89,7 +89,7 @@ export default class RandomNumberForm extends React.Component {
               onChange={radix => this.setState({radix})}
 
               textFieldProps={{
-                hintText: 'Enter radix number...'
+                hintText: 'Radix number'
               }}
 
               selectFieldProps={{
