@@ -50,7 +50,7 @@ export default class NamedValues extends React.Component {
         {...this.state.textFieldProps}
       /></div>
 
-      <SelectField
+      <div><SelectField
         name='named-value'
         value={this.state.value}
         onChange={onChange}
@@ -63,7 +63,7 @@ export default class NamedValues extends React.Component {
             key={name}
             {...this.state.createMenuItemProps({value, name})}
           />))
-      }</SelectField>
+      }</SelectField></div>
 
     </Container>
   }
