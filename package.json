@@ -36,6 +36,7 @@
     "x-iterable": "^6.0.1"
   },
   "scripts": {
+    "gh-pages": "bash ./sh/gh-pages.sh",
     "browser": "bash ./sh/browser.sh",
     "browse-local-fs": "bash ./sh/browse-local-fs.sh",
     "view-coverage": "bash ./sh/view-coverage.sh",
