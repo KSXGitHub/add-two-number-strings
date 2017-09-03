@@ -20,7 +20,12 @@ test('JavaScript Code Style: StandardJS', () => {
 
   expect(argv).toBeInstanceOf(Array)
 
-  const {stdout, stderr, status, error} = spawnSync(STANDARDJS_EXECUTABLE || 'standard', argv, {cwd: wdir})
+  const {
+    stdout,
+    stderr,
+    error,
+    status
+  } = spawnSync(STANDARDJS_EXECUTABLE || 'standard', argv, {cwd: wdir})
 
   if (stdout === null) console.warn('standard.stdout is null')
   if (stderr === null) console.warn('standard.stderr is null')
