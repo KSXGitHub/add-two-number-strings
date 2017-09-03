@@ -32,7 +32,7 @@ export default class RandomNumberForm extends React.Component {
   render () {
     const getText = float => (
       (parseFloat(float)
-        .toString(16)
+        .toString(this.state.radix)
         .slice(2)
         .slice(this.state.begin, this.state.end)
       )[this.state.uppercase ? 'toUpperCase' : 'toLowerCase']()
