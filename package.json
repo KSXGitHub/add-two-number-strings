@@ -4,9 +4,14 @@
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "just-try": "^2.0.1",
     "material-ui": "^0.19.0",
+    "moment": "^2.18.1",
+    "product-iterable": "^3.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-monaco-editor": "^0.10.0",
     "standard-loader": "^6.0.1"
   },
   "devDependencies": {
@@ -45,6 +50,7 @@
     "live-server": "live-server",
     "serve-dist": "live-server dist",
     "serve-coverage": "live-server coverage/lcov-report",
+    "gh-pages": "bash sh/gh-pages.sh",
     "browser": "bash sh/browser.sh",
     "browse-local-fs": "bash sh/browse-local-fs.sh",
     "view-coverage": "bash sh/view-coverage.sh",
