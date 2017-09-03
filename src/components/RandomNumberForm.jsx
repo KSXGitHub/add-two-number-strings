@@ -85,7 +85,7 @@ export default class RandomNumberForm extends React.Component {
           <div className='radix-container'>
             <p>Radix</p>
             <NamedRadixes
-              value={this.state.radix}
+              radix={this.state.radix}
               onChange={radix => this.setState({radix})}
 
               textFieldProps={{
