@@ -14,6 +14,7 @@ export default class RandomNumberForm extends React.Component {
       begin = 0,
       end = 13,
       uppercase = true,
+      radix = 16,
       defaultContent = <i>(Empty)</i>,
       init
     } = props
@@ -22,6 +23,7 @@ export default class RandomNumberForm extends React.Component {
       begin,
       end,
       uppercase,
+      radix,
       defaultContent,
       init
     }
@@ -83,6 +85,9 @@ export default class RandomNumberForm extends React.Component {
           <div className='radix-container'>
             <p>Radix</p>
             <NamedRadixes
+              value={this.state.radix}
+              onChange={radix => this.setState({radix})}
+
               textFieldProps={{
                 hintText: 'Enter radix number...'
               }}
