@@ -4,7 +4,14 @@ import Paper from 'material-ui/Paper'
 export default class RandomNumber extends React.Component {
   constructor (props) {
     super(props)
-    const {display = String, init = Math.random, style = {}, label = 'Random Number'} = props
+
+    const {
+      display = String,
+      init = Math.random,
+      style = {},
+      label = 'Random Number'
+    } = props
+
     const value = init()
     const displayValue = () => display(value)
     this.state = {displayValue, style, label}
