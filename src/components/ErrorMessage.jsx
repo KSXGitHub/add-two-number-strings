@@ -12,9 +12,9 @@ export const DEFAULT_WRAP = children =>
 
 export default function ErrorMessage (props) {
   const {
-    error: {message} = DEFAULT_ERROR,
+    error = DEFAULT_ERROR,
     wrap = DEFAULT_WRAP
   } = props
 
-  return wrap(message)
+  return wrap(String(error))
 }
