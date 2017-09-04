@@ -5,25 +5,16 @@ import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 export default class MuiWrapper extends React.Component {
-  constructor (props) {
-    super(props)
-
-    const {
-      darkTheme = false,
-      ...rest
-    } = props
-
-    this.state = {darkTheme, ...rest}
-  }
-
   render () {
     const {
+      darkTheme,
       children,
-      darkTheme
-    } = this.state
+      ...rest
+    } = this.props
 
     return <MuiThemeProvider
       muiTheme={getMuiTheme(darkTheme ? darkBaseTheme : lightBaseTheme)}
+      {...rest}
     >
       {children}
     </MuiThemeProvider>
