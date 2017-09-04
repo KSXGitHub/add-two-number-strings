@@ -35,7 +35,7 @@ export default class App extends React.Component {
       </header>
       <main>
         <RandomNumberForm init={init} />
-        <ClockForm />
+        <ClockForm darkTheme={darkTheme} />
         <Paper zDepth={0}>
           <Toggle
             label='Dark Theme'
