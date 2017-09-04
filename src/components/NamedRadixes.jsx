@@ -1,7 +1,7 @@
 import React from 'react'
 import NamedValues from './NamedValues.jsx'
 
-const DEFAULT_NAMES = {
+export const DEFAULT_NAMES = {
   2: 'Binary',
   8: 'Octal',
   10: 'Decimal',
