@@ -8,6 +8,14 @@ const DEFAULT_NAMES = {
   16: 'Hexadecimal'
 }
 
+export const DEFAULT_TEXT_FIELD_PROPS = {
+  hintText: 'Radix number'
+}
+
+export const DEFAULT_SELECT_FIELD_PROPS = {
+  floatingLabelText: 'Radix name'
+}
+
 export default class NamedRadixes extends React.Component {
   constructor (props) {
     super(props)
@@ -16,10 +24,19 @@ export default class NamedRadixes extends React.Component {
       radix = 10,
       names = DEFAULT_NAMES,
       onChange = () => {},
+      textFieldProps = DEFAULT_TEXT_FIELD_PROPS,
+      selectFieldProps = DEFAULT_SELECT_FIELD_PROPS,
       ...rest
     } = props
 
-    this.state = {radix, names, onChange, ...rest}
+    this.state = {
+      radix,
+      names,
+      onChange,
+      textFieldProps,
+      selectFieldProps,
+      ...rest
+    }
   }
 
   render () {
