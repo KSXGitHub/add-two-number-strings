@@ -8,7 +8,7 @@ initdir () {
   initfs mkdir $1
 }
 
-[[ $SKIP_INIT_DIRS == 'false' ]] || {
+[[ $DO_INIT_DIRS != 'true' ]] || {
   for dir in $(./sh/lib/init-dir-list.sh)
   do
     initdir $dir
