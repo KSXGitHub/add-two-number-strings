@@ -80,7 +80,6 @@ export default class NamedValues extends React.Component {
             {...createMenuItemProps({value, name})}
           />))
       }</SelectField></div>
-
     </Container>
   }
 
