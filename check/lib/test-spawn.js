@@ -4,6 +4,7 @@ function main ({
   path = require('path'),
   childProcess: {spawnSync} = require('child_process'),
   process: {env} = require('process'),
+  alwaysPrintStdIO = false,
   defaultExecutable = 'echo',
   envPrefix = ''
 } = {}) {
@@ -34,6 +35,7 @@ function main ({
     if (signal) console.warn(`respose.signal is ${JSON.stringify(signal)}`)
     if (error) throw error
     if (status) throw new Error(stderr + '\n' + stdout)
+    if (alwaysPrintStdIO) console.log(stderr + '\n' + stdout)
   })
 }
 
