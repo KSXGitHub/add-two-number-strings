@@ -70,8 +70,8 @@ export default class ClockForm extends React.Component {
 
           <Slider
             id='refresh-duration'
-            min={500}
-            max={1000}
+            min={512}
+            max={1024}
             value={this.state.refreshDuration}
             onChange={(_, refreshDuration) => this.setState({refreshDuration})}
             step={1}
