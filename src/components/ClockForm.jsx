@@ -6,6 +6,7 @@ import MenuItem from 'material-ui/MenuItem'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import TextField from 'material-ui/TextField'
 import Checkbox from 'material-ui/Checkbox'
+import Slider from 'material-ui/Slider'
 import MonacoEditor from 'react-monaco-editor'
 import vm from 'vm'
 import moment from 'moment'
@@ -19,6 +20,7 @@ export default class ClockForm extends React.Component {
     super(props)
 
     const {
+      refreshDuration = 1000,
       formattingMethod = 'native-to-string',
       formattingExpression = `date => {\n  return moment(date).format('LLLL')\n}`,
       momentTemplateString = 'dddd — YYYY MMMM D — h:mm:ss a',
@@ -38,6 +40,7 @@ export default class ClockForm extends React.Component {
     } = props
 
     this.state = {
+      refreshDuration,
       formattingMethod,
       formattingExpression,
       momentTemplateString,
@@ -59,6 +62,21 @@ export default class ClockForm extends React.Component {
       />
 
       <CardActions expandable>
+        <div id='refresh-rate-container'>
+          <p className='label-container label-paragraph'>
+            <label htmlFor='refresh-rate'>Refresh Rate:</label>
+          </p>
+
+          <Slider
+            id='refresh-rate'
+            min={1}
+            max={1000}
+            value={this.state.refreshDuration}
+            onChange={(_, refreshDuration) => this.setState({refreshDuration})}
+            step={1}
+          />
+        </div>
+
         <Tabs
           value={this.state.formattingMethod}
           onChange={value => this.setState({formattingMethod: value})}
