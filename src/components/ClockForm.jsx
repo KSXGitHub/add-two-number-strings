@@ -8,12 +8,12 @@ import TextField from 'material-ui/TextField'
 import Checkbox from 'material-ui/Checkbox'
 import Slider from 'material-ui/Slider'
 import MonacoEditor from 'react-monaco-editor'
+import Clock from './Clock.jsx'
+import NamedRadixes from './NamedRadixes.jsx'
 import vm from 'vm'
 import moment from 'moment'
 import jtry from 'just-try'
 import ProductIterable from 'product-iterable'
-import Clock from './Clock.jsx'
-import NamedRadixes from './NamedRadixes.jsx'
 
 export default class ClockForm extends React.Component {
   constructor (props) {
