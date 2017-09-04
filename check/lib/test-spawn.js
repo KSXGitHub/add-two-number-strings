@@ -9,9 +9,9 @@ function main ({
   envPrefix = ''
 } = {}) {
   const {
-    [`${envPrefix}_EXECUTABLE`]: executable = defaultExecutable,
-    [`${envPrefix}_ARGV`]: spawnArguments = '[]',
-    [`${envPrefix}_SKIP`]: skipSpawnTesting = 'false'
+    [`JEST_${envPrefix}_EXECUTABLE`]: executable = defaultExecutable,
+    [`JEST_${envPrefix}_ARGV`]: spawnArguments = '[]',
+    [`JEST_${envPrefix}_SKIP`]: skipSpawnTesting = 'false'
   } = env
 
   const wdir = path.resolve(__dirname, '../..')
