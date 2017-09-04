@@ -54,6 +54,8 @@ export default class NamedRadixes extends React.Component {
         onChange(radix)
         this.setState({radix})
       }}
+      textFieldGetValue={Number}
+      textFieldSetValue={String}
       {...rest}
     />
   }
