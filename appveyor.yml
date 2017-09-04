@@ -22,12 +22,12 @@ clone_depth: 1
 install:
   - cmd: echo "Repo URL" && git remote get-url origin
   - ps: Install-Product node $env:nodejs_version
-  - cmd: npm install
+  - cmd: yarn
 
 build_script:
   - cmd: echo "NodeJS version" && node --version
-  - cmd: echo "NPM version" && npm --version
-  - cmd: echo "Test" && npm test
+  - cmd: echo "YARN version" && yarn --version
+  - cmd: echo "Test" && yarn test
 
 artifacts:
   - path: dist\*.*
