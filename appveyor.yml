@@ -8,8 +8,6 @@ environment:
 
 cache:
   - '%USERPROFILE%\.nuget\packages'
-  - '%APPDATA%\npm'
-  - '%APPDATA%\npm-cache'
   - '%LOCALAPPDATA%\Yarn'
   - node_modules
 
