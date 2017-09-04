@@ -40,7 +40,7 @@ export default class NamedRadixes extends React.Component {
   }
 
   render () {
-    const {radix, names, ...rest} = this.state
+    const {radix, names, onChange, ...rest} = this.state
 
     const namedValues = new Map()
     for (const radix in names) {
@@ -51,7 +51,7 @@ export default class NamedRadixes extends React.Component {
       value={radix}
       namedValues={namedValues}
       onChange={radix => {
-        this.state.onChange(radix)
+        onChange(radix)
         this.setState({radix})
       }}
       {...rest}
