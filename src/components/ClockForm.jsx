@@ -5,6 +5,7 @@ import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import TextField from 'material-ui/TextField'
+import Checkbox from 'material-ui/Checkbox'
 import MonacoEditor from 'react-monaco-editor'
 import vm from 'vm'
 import moment from 'moment'
@@ -32,7 +33,8 @@ export default class ClockForm extends React.Component {
         undefined,
       2),
       timestampRadix = 10,
-      timestampRadixNames
+      timestampRadixNames,
+      timestampUpperCase = true
     } = props
 
     this.state = {
@@ -42,7 +44,8 @@ export default class ClockForm extends React.Component {
       toStringMethodName,
       toStringMethodArguments,
       timestampRadix,
-      timestampRadixNames
+      timestampRadixNames,
+      timestampUpperCase
     }
   }
 
@@ -107,6 +110,13 @@ export default class ClockForm extends React.Component {
               names={this.state.timestampRadixNames}
               onChange={value => this.setState({timestampRadix: value})}
             />
+
+            <Checkbox
+              label='Upper Case'
+              value={this.state.timestampUpperCase}
+              disabled={this.state.timestampRadix <= 10}
+              onCheck={(_, checked) => this.setState({timestampUpperCase: checked})}
+            />
           </Tab>
         </Tabs>
       </CardActions>
@@ -153,8 +163,9 @@ export default class ClockForm extends React.Component {
       }
 
       case 'timestamp': {
-        return date => Number(date)
+        return date => (Number(date)
           .toString(this.state.timestampRadix)
+        )[this.state.timestampUpperCase ? 'toUpperCase' : 'toLowerCase']()
       }
 
       default: {
