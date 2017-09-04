@@ -113,7 +113,7 @@ export default class ClockForm extends React.Component {
 
             <Checkbox
               label='Upper Case'
-              value={this.state.timestampUpperCase}
+              checked={this.state.timestampUpperCase}
               disabled={this.state.timestampRadix <= 10}
               onCheck={(_, checked) => this.setState({timestampUpperCase: checked})}
             />
