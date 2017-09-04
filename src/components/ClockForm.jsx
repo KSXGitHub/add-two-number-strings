@@ -192,9 +192,13 @@ export default class ClockForm extends React.Component {
       }
 
       case 'timestamp': {
-        return date => (Number(date)
-          .toString(this.state.timestampRadix)
-        )[this.state.timestampUpperCase ? 'toUpperCase' : 'toLowerCase']()
+        return date => jtry(
+          () => (Number(date)
+            .toString(this.state.timestampRadix)
+          )[this.state.timestampUpperCase ? 'toUpperCase' : 'toLowerCase'](),
+
+          yieldError
+        )
       }
 
       default: {
