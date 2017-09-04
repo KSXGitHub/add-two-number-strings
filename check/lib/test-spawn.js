@@ -6,12 +6,12 @@ function main ({
   process: {env} = require('process'),
   alwaysPrintStdIO = false,
   defaultExecutable = 'echo',
-  envPrefix = ''
+  envMiddleName = '?'
 } = {}) {
   const {
-    [`JEST_${envPrefix}_EXECUTABLE`]: executable = defaultExecutable,
-    [`JEST_${envPrefix}_ARGV`]: spawnArguments = '[]',
-    [`JEST_${envPrefix}_SKIP`]: skipSpawnTesting = 'false'
+    [`JEST_${envMiddleName}_EXECUTABLE`]: executable = defaultExecutable,
+    [`JEST_${envMiddleName}_ARGV`]: spawnArguments = '[]',
+    [`JEST_${envMiddleName}_SKIP`]: skipSpawnTesting = 'false'
   } = env
 
   const wdir = path.resolve(__dirname, '../..')
