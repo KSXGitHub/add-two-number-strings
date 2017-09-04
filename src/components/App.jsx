@@ -22,7 +22,7 @@ export default class App extends React.Component {
   render () {
     const {init, darkTheme} = this.state
 
-    return <MuiWrapper darkTheme={darkTheme}><div>
+    return <MuiWrapper darkTheme={darkTheme}><Paper>
       <header>
         <AppBar title='Hello, World!!' showMenuIconButton={false} />
       </header>
@@ -38,6 +38,6 @@ export default class App extends React.Component {
         </Paper>
       </main>
       <Footer />
-    </div></MuiWrapper>
+    </Paper></MuiWrapper>
   }
 }
