@@ -164,7 +164,8 @@ export default class ClockForm extends React.Component {
           const script = new vm.Script(this.state.formattingExpression)
           return date => jtry(
             () => script.runInNewContext({moment, date}),
-            error => (<span className='error'>{error.message}</span>)
+            error => (<span className='error'>{error.message}</span>),
+            value => value ? String(value) : <i>(Empty)</i>
           )
         } catch (error) {
           return () => error.message
