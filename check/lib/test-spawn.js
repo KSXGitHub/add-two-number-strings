@@ -16,7 +16,7 @@ function main ({
   const wdir = path.resolve(__dirname, '..')
 
   test('JavaScript Code Style: StandardJS', () => {
-    if (skipSpawnTesting === 'true') return
+    if (skipSpawnTesting.toLowerCase() === 'true') return
 
     expect(argv).toBeInstanceOf(Array)
 
