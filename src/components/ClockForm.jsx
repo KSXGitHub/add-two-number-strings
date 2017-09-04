@@ -53,6 +53,12 @@ export default class ClockForm extends React.Component {
   }
 
   render () {
+    const {
+      darkTheme = false
+    } = this.props
+
+    const monacoEditorTheme = darkTheme ? 'vs-dark' : 'vs-light'
+
     return <Paper zDepth={1}><Card>
       <CardHeader
         title='Clock'
@@ -86,7 +92,7 @@ export default class ClockForm extends React.Component {
             <MonacoEditor
               height='200'
               language='javascript'
-              theme='vs-light'
+              theme={monacoEditorTheme}
               value={this.state.formattingExpression}
               onChange={value => this.setState({formattingExpression: value})}
             />
@@ -116,7 +122,7 @@ export default class ClockForm extends React.Component {
             <MonacoEditor
               height='150'
               language='json'
-              theme='vs-light'
+              theme={monacoEditorTheme}
               value={this.state.toStringMethodArguments}
               onChange={value => this.setState({toStringMethodArguments: value})}
             />

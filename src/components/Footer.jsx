@@ -1,4 +1,5 @@
 import React from 'react'
+import Paper from 'material-ui/Paper'
 
 const style = {
   fontFamily: "'Roboto', sans-serif",
@@ -7,7 +8,7 @@ const style = {
 }
 
 export default function Footer () {
-  return <footer style={style}>
+  return <footer style={style}><Paper zDepth={0}>
     <p>
       Source code is available on&nbsp;
       <a href='https://github.com/KSXGitHub/react-hello-world'>GitHub</a>
@@ -17,5 +18,5 @@ export default function Footer () {
       <br />
       All rights reserved.
     </p>
-  </footer>
+  </Paper></footer>
 }
