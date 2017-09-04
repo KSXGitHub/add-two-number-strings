@@ -20,8 +20,6 @@ temp.*
 /debug.*
 /*.debug
 /dist
-*.tern-project
-*.tern-project.json
 
 # Logs
 logs
