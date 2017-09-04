@@ -62,14 +62,14 @@ export default class ClockForm extends React.Component {
       />
 
       <CardActions expandable>
-        <div id='refresh-rate-container'>
+        <div id='refresh-duration-container'>
           <p className='label-container label-paragraph'>
-            <label htmlFor='refresh-rate'>Refresh Rate:&nbsp;</label>
-            <output htmlFor='refresh-rate'>{this.state.refreshDuration}</output>
+            <label htmlFor='refresh-duration'>Refresh Duration:&nbsp;</label>
+            <output htmlFor='refresh-duration'>{this.state.refreshDuration}</output>
           </p>
 
           <Slider
-            id='refresh-rate'
+            id='refresh-duration'
             min={1}
             max={1000}
             value={this.state.refreshDuration}
