@@ -8,12 +8,13 @@ import TextField from 'material-ui/TextField'
 import Checkbox from 'material-ui/Checkbox'
 import Slider from 'material-ui/Slider'
 import MonacoEditor from 'react-monaco-editor'
+import Clock from './Clock.jsx'
+import NamedRadixes from './NamedRadixes.jsx'
+import ErrorMessage from './ErrorMessage.jsx'
 import vm from 'vm'
 import moment from 'moment'
 import jtry from 'just-try'
 import ProductIterable from 'product-iterable'
-import Clock from './Clock.jsx'
-import NamedRadixes from './NamedRadixes.jsx'
 
 export default class ClockForm extends React.Component {
   constructor (props) {
@@ -22,7 +23,7 @@ export default class ClockForm extends React.Component {
     const {
       refreshDuration = 1000,
       formattingMethod = 'native-to-string',
-      formattingExpression = `date => {\n  return moment(date).format('LLLL')\n}`,
+      formattingExpression = `moment(date).format('LLLL')`,
       momentTemplateString = 'dddd — YYYY MMMM D — h:mm:ss a',
       toStringMethodName = 'toLocaleTimeString',
       toStringMethodArguments = JSON.stringify(
@@ -158,16 +159,19 @@ export default class ClockForm extends React.Component {
   }
 
   getFormattingMethod (method = this.state.formattingMethod) {
+    const yieldError = error => (<ErrorMessage error={error} />)
+
     switch (method) {
       case 'javascript-expression': {
         try {
           const script = new vm.Script(this.state.formattingExpression)
-          const result = script.runInNewContext({moment})
-          return typeof result === 'function'
-            ? date => String(jtry(() => result(date)))
-            : () => 'TypeError: Script must return a function'
+          return date => jtry(
+            () => script.runInNewContext({moment, date}),
+            yieldError,
+            value => value ? String(value) : <i>(Empty)</i>
+          )
         } catch (error) {
-          return () => error.message
+          return yieldError(error)
         }
       }
 
@@ -182,15 +186,18 @@ export default class ClockForm extends React.Component {
             const {locale, options} = JSON.parse(this.state.toStringMethodArguments)
             return date[this.state.toStringMethodName](locale, options)
           } catch (error) {
-            return error.message
+            return yieldError(error)
           }
         }
       }
 
       case 'timestamp': {
-        return date => (Number(date)
-          .toString(this.state.timestampRadix)
-        )[this.state.timestampUpperCase ? 'toUpperCase' : 'toLowerCase']()
+        return date => jtry(
+          () => (Number(date)
+            .toString(this.state.timestampRadix)
+          )[this.state.timestampUpperCase ? 'toUpperCase' : 'toLowerCase'](),
+          yieldError
+        )
       }
 
       default: {
