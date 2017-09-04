@@ -10,6 +10,7 @@ cache:
   - '%USERPROFILE%\.nuget\packages'
   - '%APPDATA%\npm'
   - '%APPDATA%\npm-cache'
+  - '%LOCALAPPDATA%\Yarn'
   - node_modules
 
 image: Visual Studio 2015
