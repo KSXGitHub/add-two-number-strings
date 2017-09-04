@@ -11,6 +11,7 @@ import moment from 'moment'
 import jtry from 'just-try'
 import ProductIterable from 'product-iterable'
 import Clock from './Clock.jsx'
+import NamedRadixes from './NamedRadixes.jsx'
 
 export default class ClockForm extends React.Component {
   constructor (props) {
@@ -29,7 +30,9 @@ export default class ClockForm extends React.Component {
           }
         },
         undefined,
-      2)
+      2),
+      timestampRadix = 10,
+      timestampRadixNames
     } = props
 
     this.state = {
@@ -37,7 +40,9 @@ export default class ClockForm extends React.Component {
       formattingExpression,
       momentTemplateString,
       toStringMethodName,
-      toStringMethodArguments
+      toStringMethodArguments,
+      timestampRadix,
+      timestampRadixNames
     }
   }
 
@@ -95,7 +100,22 @@ export default class ClockForm extends React.Component {
             />
           </Tab>
 
-          <Tab label='UNIX Timestamp' value='timestamp' />
+          <Tab label='UNIX Timestamp' value='timestamp'>
+            <p>Radix</p>
+            <NamedRadixes
+              radix={this.state.timestampRadix}
+              names={this.state.timestampRadixNames}
+              onChange={value => this.setState({timestampRadix: value})}
+
+              textFieldProps={{
+                hintText: 'Radix number'
+              }}
+
+              selectFieldProps={{
+                floatingLabelText: 'Radix name'
+              }}
+            />
+          </Tab>
         </Tabs>
       </CardActions>
 
@@ -142,6 +162,7 @@ export default class ClockForm extends React.Component {
 
       case 'timestamp': {
         return date => Number(date)
+          .toString(this.state.timestampRadix)
       }
 
       default: {
