@@ -16,8 +16,11 @@ export default class Clock extends React.Component {
       display = date => (<Wrap>{getContent(date)}</Wrap>)
     } = props
 
-    this.state = {date: new Date(), display}
-    this.refreshRate = parseInt(refreshRate)
+    this.state = {
+      refreshRate: parseInt(refreshRate),
+      date: new Date(),
+      display
+    }
   }
 
   render () {
@@ -41,6 +44,6 @@ export default class Clock extends React.Component {
     this.timerID = setTimeout(() => {
       this.tick()
       this.beginInterval()
-    }, this.refreshRate)
+    }, this.state.refreshRate)
   }
 }
