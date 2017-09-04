@@ -22,7 +22,7 @@ export default class ClockForm extends React.Component {
     const {
       refreshDuration = 1000,
       formattingMethod = 'native-to-string',
-      formattingExpression = `date => {\n  return moment(date).format('LLLL')\n}`,
+      formattingExpression = `moment(date).format('LLLL')`,
       momentTemplateString = 'dddd — YYYY MMMM D — h:mm:ss a',
       toStringMethodName = 'toLocaleTimeString',
       toStringMethodArguments = JSON.stringify(
@@ -162,10 +162,10 @@ export default class ClockForm extends React.Component {
       case 'javascript-expression': {
         try {
           const script = new vm.Script(this.state.formattingExpression)
-          const result = script.runInNewContext({moment})
-          return typeof result === 'function'
-            ? date => String(jtry(() => result(date)))
-            : () => 'TypeError: Script must return a function'
+          return date => jtry(
+            () => script.runInNewContext({moment, date}),
+            error => (<span className='error'>{error.message}</span>)
+          )
         } catch (error) {
           return () => error.message
         }
