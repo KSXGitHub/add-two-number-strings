@@ -10,6 +10,7 @@ import Slider from 'material-ui/Slider'
 import MonacoEditor from 'react-monaco-editor'
 import Clock from './Clock.jsx'
 import NamedRadixes from './NamedRadixes.jsx'
+import ErrorMessage from './ErrorMessage.jsx'
 import vm from 'vm'
 import moment from 'moment'
 import jtry from 'just-try'
@@ -158,17 +159,19 @@ export default class ClockForm extends React.Component {
   }
 
   getFormattingMethod (method = this.state.formattingMethod) {
+    const yieldError = error => (<ErrorMessage error={error} />)
+
     switch (method) {
       case 'javascript-expression': {
         try {
           const script = new vm.Script(this.state.formattingExpression)
           return date => jtry(
             () => script.runInNewContext({moment, date}),
-            error => (<span className='error'>{error.message}</span>),
+            yieldError,
             value => value ? String(value) : <i>(Empty)</i>
           )
         } catch (error) {
-          return () => error.message
+          return yieldError(error)
         }
       }
 
@@ -183,7 +186,7 @@ export default class ClockForm extends React.Component {
             const {locale, options} = JSON.parse(this.state.toStringMethodArguments)
             return date[this.state.toStringMethodName](locale, options)
           } catch (error) {
-            return error.message
+            return yieldError(error)
           }
         }
       }
