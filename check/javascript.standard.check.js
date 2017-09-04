@@ -26,7 +26,7 @@ test('JavaScript Code Style: StandardJS', () => {
     signal,
     error,
     status
-  } = spawnSync(STANDARDJS_EXECUTABLE, argv, {cwd: wdir})
+  } = spawnSync(STANDARDJS_EXECUTABLE, argv, {cwd: wdir, shell: true})
 
   if (stdout === null) console.warn('standard.stdout is null')
   if (stderr === null) console.warn('standard.stderr is null')
