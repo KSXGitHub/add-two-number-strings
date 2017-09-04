@@ -4,6 +4,7 @@ export const DEFAULT_ERROR = new Error('Empty')
 
 export const DEFAULT_STYLE = {
   color: 'red',
+  fontFamily: 'monospace',
   fontSize: '0.75em'
 }
 
