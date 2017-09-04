@@ -9,7 +9,7 @@ function main ({
 } = {}) {
   const {
     [`${envPrefix}_EXECUTABLE`]: executable = defaultExecutable,
-    [`${envPrefix}_ARGV`]: spawnArguments,
+    [`${envPrefix}_ARGV`]: spawnArguments = '[]',
     [`${envPrefix}_SKIP`]: skipSpawnTesting
   } = env
 
@@ -17,10 +17,6 @@ function main ({
 
   test('JavaScript Code Style: StandardJS', () => {
     if (skipSpawnTesting === 'true') return
-
-    const argv = spawnArguments
-      ? JSON.parse(spawnArguments)
-      : []
 
     expect(argv).toBeInstanceOf(Array)
 
