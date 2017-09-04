@@ -4,6 +4,8 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import Slider from 'material-ui/Slider'
 import Checkbox from 'material-ui/Checkbox'
 import RandomNumber from './RandomNumber.jsx'
+import NamedRadixes from './NamedRadixes.jsx'
+import jtry from 'just-try'
 
 export default class RandomNumberForm extends React.Component {
   constructor (props) {
@@ -13,6 +15,7 @@ export default class RandomNumberForm extends React.Component {
       begin = 0,
       end = 13,
       uppercase = true,
+      radix = 16,
       defaultContent = <i>(Empty)</i>,
       init
     } = props
@@ -21,6 +24,7 @@ export default class RandomNumberForm extends React.Component {
       begin,
       end,
       uppercase,
+      radix,
       defaultContent,
       init
     }
@@ -29,7 +33,7 @@ export default class RandomNumberForm extends React.Component {
   render () {
     const getText = float => (
       (parseFloat(float)
-        .toString(16)
+        .toString(this.state.radix)
         .slice(2)
         .slice(this.state.begin, this.state.end)
       )[this.state.uppercase ? 'toUpperCase' : 'toLowerCase']()
@@ -46,7 +50,8 @@ export default class RandomNumberForm extends React.Component {
       <CardText expandable>
         <CardActions expandable>
           <p>
-            <label htmlFor='begin-slider'>Begin</label>
+            <label htmlFor='begin-slider'>Begin:&nbsp;</label>
+            <output htmlFor='begin-slider'>{this.state.begin}</output>
           </p>
 
           <Slider
@@ -59,7 +64,8 @@ export default class RandomNumberForm extends React.Component {
           />
 
           <p>
-            <label htmlFor='end-slider'>End</label>
+            <label htmlFor='end-slider'>End:&nbsp;</label>
+            <output htmlFor='end-slider'>{this.state.end}</output>
           </p>
 
           <Slider
@@ -74,16 +80,33 @@ export default class RandomNumberForm extends React.Component {
           <Checkbox
             label='Upper Case'
             checked={this.state.uppercase}
+            disabled={this.state.radix <= 10}
             onCheck={(_, uppercase) => this.setState({uppercase})}
             style={{marginBottom: 16}}
             labelPosition='right'
           />
+
+          <div className='radix-container'>
+            <p>Radix</p>
+            <NamedRadixes
+              radix={this.state.radix}
+              onChange={radix => this.setState({radix})}
+            />
+          </div>
         </CardActions>
       </CardText>
 
       <CardText>
         <RandomNumber
-          display={getText}
+          display={float => jtry(
+            () => getText(float),
+            error => (<span
+              className='error'
+              style={{color: 'red', fontSize: '0.75em'}}
+            >
+              {error.message}
+            </span>)
+          )}
           init={this.state.init}
           style={{
             label: {

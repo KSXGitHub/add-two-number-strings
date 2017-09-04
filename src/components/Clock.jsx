@@ -8,7 +8,7 @@ export default class Clock extends React.Component {
     super(props)
 
     const {
-      refreshRate = 1000,
+      refreshDuration = 1000,
       format: {
         wrap: Wrap = DEFAULT_WRAP,
         content: getContent = DEFAULT_CONTENT
@@ -16,8 +16,11 @@ export default class Clock extends React.Component {
       display = date => (<Wrap>{getContent(date)}</Wrap>)
     } = props
 
-    this.state = {date: new Date(), display}
-    this.refreshRate = parseInt(refreshRate)
+    this.state = {
+      refreshDuration: parseInt(refreshDuration),
+      date: new Date(),
+      display
+    }
   }
 
   render () {
@@ -25,15 +28,22 @@ export default class Clock extends React.Component {
   }
 
   componentDidMount () {
-    this.timerID = setInterval(() => this.tick(), this.refreshRate)
+    this.beginInterval()
   }
 
   componentWillUnmount () {
-    clearInterval(this.timerID)
+    clearTimeout(this.timerID)
     delete this.timerID
   }
 
   tick () {
     this.setState({date: new Date()})
+  }
+
+  beginInterval () {
+    this.timerID = setTimeout(() => {
+      this.tick()
+      this.beginInterval()
+    }, this.state.refreshDuration)
   }
 }

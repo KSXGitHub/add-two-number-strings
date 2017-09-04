@@ -5,18 +5,22 @@ import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import TextField from 'material-ui/TextField'
+import Checkbox from 'material-ui/Checkbox'
+import Slider from 'material-ui/Slider'
 import MonacoEditor from 'react-monaco-editor'
 import vm from 'vm'
 import moment from 'moment'
 import jtry from 'just-try'
 import ProductIterable from 'product-iterable'
 import Clock from './Clock.jsx'
+import NamedRadixes from './NamedRadixes.jsx'
 
 export default class ClockForm extends React.Component {
   constructor (props) {
     super(props)
 
     const {
+      refreshDuration = 1000,
       formattingMethod = 'native-to-string',
       formattingExpression = `date => {\n  return moment(date).format('LLLL')\n}`,
       momentTemplateString = 'dddd — YYYY MMMM D — h:mm:ss a',
@@ -29,15 +33,22 @@ export default class ClockForm extends React.Component {
           }
         },
         undefined,
-      2)
+      2),
+      timestampRadix = 10,
+      timestampRadixNames,
+      timestampUpperCase = true
     } = props
 
     this.state = {
+      refreshDuration,
       formattingMethod,
       formattingExpression,
       momentTemplateString,
       toStringMethodName,
-      toStringMethodArguments
+      toStringMethodArguments,
+      timestampRadix,
+      timestampRadixNames,
+      timestampUpperCase
     }
   }
 
@@ -51,6 +62,22 @@ export default class ClockForm extends React.Component {
       />
 
       <CardActions expandable>
+        <div id='refresh-duration-container'>
+          <p className='label-container label-paragraph'>
+            <label htmlFor='refresh-duration'>Refresh Duration:&nbsp;</label>
+            <output htmlFor='refresh-duration'>{this.state.refreshDuration}</output>
+          </p>
+
+          <Slider
+            id='refresh-duration'
+            min={512}
+            max={1024}
+            value={this.state.refreshDuration}
+            onChange={(_, refreshDuration) => this.setState({refreshDuration})}
+            step={1}
+          />
+        </div>
+
         <Tabs
           value={this.state.formattingMethod}
           onChange={value => this.setState({formattingMethod: value})}
@@ -64,6 +91,7 @@ export default class ClockForm extends React.Component {
               onChange={value => this.setState({formattingExpression: value})}
             />
           </Tab>
+
           <Tab label='Moment.js' value='momentjs'>
             <TextField
               hintText='Moment.js Date/Time Format'
@@ -71,6 +99,7 @@ export default class ClockForm extends React.Component {
               onChange={(_, value) => this.setState({momentTemplateString: value})}
             />
           </Tab>
+
           <Tab label='Native toString function' value='native-to-string'>
             <div>{React.createElement(
               SelectField,
@@ -83,6 +112,7 @@ export default class ClockForm extends React.Component {
                 .map(([locale, datetime]) => `to${locale}${datetime}String`)
                 .map(fname => (<MenuItem value={fname} primaryText={`.${fname}()`} />))
             )}</div>
+
             <MonacoEditor
               height='150'
               language='json'
@@ -91,7 +121,22 @@ export default class ClockForm extends React.Component {
               onChange={value => this.setState({toStringMethodArguments: value})}
             />
           </Tab>
-          <Tab label='UNIX Timestamp' value='timestamp' />
+
+          <Tab label='UNIX Timestamp' value='timestamp'>
+            <p>Radix</p>
+            <NamedRadixes
+              radix={this.state.timestampRadix}
+              names={this.state.timestampRadixNames}
+              onChange={value => this.setState({timestampRadix: value})}
+            />
+
+            <Checkbox
+              label='Upper Case'
+              checked={this.state.timestampUpperCase}
+              disabled={this.state.timestampRadix <= 10}
+              onCheck={(_, checked) => this.setState({timestampUpperCase: checked})}
+            />
+          </Tab>
         </Tabs>
       </CardActions>
 
@@ -137,7 +182,9 @@ export default class ClockForm extends React.Component {
       }
 
       case 'timestamp': {
-        return date => Number(date)
+        return date => (Number(date)
+          .toString(this.state.timestampRadix)
+        )[this.state.timestampUpperCase ? 'toUpperCase' : 'toLowerCase']()
       }
 
       default: {
