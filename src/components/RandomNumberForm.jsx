@@ -50,7 +50,8 @@ export default class RandomNumberForm extends React.Component {
       <CardText expandable>
         <CardActions expandable>
           <p>
-            <label htmlFor='begin-slider'>Begin</label>
+            <label htmlFor='begin-slider'>Begin:&nbsp;</label>
+            <output htmlFor='begin-slider'>{this.state.begin}</output>
           </p>
 
           <Slider
@@ -63,7 +64,8 @@ export default class RandomNumberForm extends React.Component {
           />
 
           <p>
-            <label htmlFor='end-slider'>End</label>
+            <label htmlFor='end-slider'>End:&nbsp;</label>
+            <output htmlFor='end-slider'>{this.state.end}</output>
           </p>
 
           <Slider
