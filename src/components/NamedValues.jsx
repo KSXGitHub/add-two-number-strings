@@ -34,6 +34,7 @@ export default class NamedValues extends React.Component {
 
   render () {
     const {
+      onChange,
       value,
       namedValues,
       defaultName,
@@ -48,7 +49,7 @@ export default class NamedValues extends React.Component {
     const handleChange = value => {
       let prevent = false
 
-      this.state.onChange(value, {
+      onChange(value, {
         preventDefault: () => { prevent = true }
       })
 
