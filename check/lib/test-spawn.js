@@ -18,6 +18,7 @@ function main ({
   test('JavaScript Code Style: StandardJS', () => {
     if (skipSpawnTesting.toLowerCase() === 'true') return
 
+    const argv = JSON.parse(spawnArguments)
     expect(argv).toBeInstanceOf(Array)
 
     const {
