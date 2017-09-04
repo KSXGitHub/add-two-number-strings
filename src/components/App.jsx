@@ -1,5 +1,7 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar'
+import Paper from 'material-ui/Paper'
+import Toggle from 'material-ui/Toggle'
 import MuiWrapper from './MuiWrapper.jsx'
 import RandomNumberForm from './RandomNumberForm.jsx'
 import ClockForm from './ClockForm.jsx'
@@ -27,6 +29,13 @@ export default class App extends React.Component {
       <main>
         <RandomNumberForm init={init} />
         <ClockForm />
+        <Paper zDepth={0}>
+          <Toggle
+            label='Dark Theme'
+            toggled={darkTheme}
+            onToggle={(_, darkTheme) => this.setState({darkTheme})}
+          />
+        </Paper>
       </main>
       <Footer />
     </div></MuiWrapper>
