@@ -22,10 +22,6 @@ clone_depth: 1
 install:
   - cmd: echo "Repo URL" && git remote get-url origin
   - ps: Install-Product node $env:nodejs_version
-  - cmd: IF %nodejs_version% EQU 0.8 npm -g install npm@2
-  - cmd: IF %nodejs_version% EQU 0.8 set PATH=%APPDATA%\npm;%PATH%
-  - cmd: npm -g install npm
-  - cmd: IF %nodejs_version% NEQ 0.8 set PATH=%APPDATA%\npm;%PATH%
   - cmd: npm install
 
 build_script:
