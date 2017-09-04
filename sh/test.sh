@@ -1,4 +1,6 @@
 (
+  export JEST_WEBPACK_SKIP=true
+
   if [[ $COVERALLS == 'true' ]];
     then
       bash ./sh/test-coverage.sh
