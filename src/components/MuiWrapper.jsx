@@ -9,7 +9,7 @@ export default function MuiWrapper (props) {
     darkTheme,
     children,
     ...rest
-  } = this.props
+  } = props
 
   return <MuiThemeProvider
     muiTheme={getMuiTheme(darkTheme ? darkBaseTheme : lightBaseTheme)}
