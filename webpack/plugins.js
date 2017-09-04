@@ -9,7 +9,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 })
 
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const copyWebpackPlugin = new CopyWebpackPlugin([
+const copyMonacoEditor = new CopyWebpackPlugin([
   {
     from: 'node_modules/monaco-editor/min/vs',
     to: 'vs'
@@ -18,5 +18,5 @@ const copyWebpackPlugin = new CopyWebpackPlugin([
 
 module.exports = [
   HtmlWebpackPluginConfig,
-  copyWebpackPlugin
+  copyMonacoEditor
 ]
