@@ -13,7 +13,7 @@ function main ({
     [`${envPrefix}_SKIP`]: skipSpawnTesting = 'false'
   } = env
 
-  const wdir = path.resolve(__dirname, '..')
+  const wdir = path.resolve(__dirname, '../..')
 
   test('JavaScript Code Style: StandardJS', () => {
     if (skipSpawnTesting.toLowerCase() === 'true') return
