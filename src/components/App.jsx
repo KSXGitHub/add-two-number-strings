@@ -7,6 +7,13 @@ import RandomNumberForm from './RandomNumberForm.jsx'
 import ClockForm from './ClockForm.jsx'
 import Footer from './Footer.jsx'
 
+export const TOP_PAPER_STYLE = {
+  height: '100%',
+  padding: 0,
+  border: 0,
+  margin: 0
+}
+
 export default class App extends React.Component {
   constructor (props) {
     super(props)
@@ -22,7 +29,7 @@ export default class App extends React.Component {
   render () {
     const {init, darkTheme} = this.state
 
-    return <MuiWrapper darkTheme={darkTheme}><Paper>
+    return <MuiWrapper darkTheme={darkTheme}><Paper style={TOP_PAPER_STYLE}>
       <header>
         <AppBar title='Hello, World!!' showMenuIconButton={false} />
       </header>
