@@ -50,7 +50,6 @@
     "live-server": "live-server",
     "serve-dist": "live-server dist",
     "serve-coverage": "live-server coverage/lcov-report",
-    "gh-pages": "bash sh/gh-pages.sh",
     "browser": "bash sh/browser.sh",
     "browse-local-fs": "bash sh/browse-local-fs.sh",
     "view-coverage": "bash sh/view-coverage.sh",
