@@ -12,6 +12,8 @@ export default class NamedValues extends React.Component {
       namedValues = new Map(),
       defaultName = '',
       onChange = () => {},
+      textFieldGetValue = x => x,
+      textFieldSetValue = x => x,
       textFieldProps = {},
       selectFieldProps = {},
       createMenuItemProps = () => ({}),
@@ -20,6 +22,8 @@ export default class NamedValues extends React.Component {
 
     this.state = {
       onChange,
+      textFieldGetValue,
+      textFieldSetValue,
       textFieldProps,
       selectFieldProps,
       createMenuItemProps,
@@ -29,7 +33,11 @@ export default class NamedValues extends React.Component {
   }
 
   render () {
-    const Container = this.state.container
+    const {
+      textFieldGetValue,
+      textFieldSetValue,
+      container: Container
+    } = this.state
 
     const onChange = value => {
       let prevent = false
@@ -46,8 +54,8 @@ export default class NamedValues extends React.Component {
     return <Container>
       <div><TextField
         name='anonymous-value'
-        value={this.state.value}
-        onChange={(_, value) => onChange(value)}
+        value={textFieldSetValue(this.state.value)}
+        onChange={(_, value) => onChange(textFieldGetValue(value))}
         {...this.state.textFieldProps}
       /></div>
 
