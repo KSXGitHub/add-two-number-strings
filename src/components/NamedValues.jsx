@@ -34,8 +34,14 @@ export default class NamedValues extends React.Component {
 
   render () {
     const {
+      value,
+      namedValues,
+      defaultName,
       textFieldGetValue,
       textFieldSetValue,
+      textFieldProps,
+      selectFieldProps,
+      createMenuItemProps,
       container: Container
     } = this.state
 
@@ -47,30 +53,30 @@ export default class NamedValues extends React.Component {
       })
 
       prevent || this.setState(
-        this.createState(value, this.state.namedValues, this.state.defaultName)
+        this.createState(value, namedValues, defaultName)
       )
     }
 
     return <Container>
       <div><TextField
         name='anonymous-value'
-        value={textFieldSetValue(this.state.value)}
+        value={textFieldSetValue(value)}
         onChange={(_, value) => onChange(textFieldGetValue(value))}
-        {...this.state.textFieldProps}
+        {...textFieldProps}
       /></div>
 
       <div><SelectField
         name='named-value'
-        value={this.state.value}
+        value={value}
         onChange={(_, __, value) => onChange(value)}
-        {...this.state.selectFieldProps}
+        {...selectFieldProps}
       >{
-        Array.from(this.state.namedValues)
+        Array.from(namedValues)
           .map(([value, name]) => (<MenuItem
             value={value}
             primaryText={name}
             key={name}
-            {...this.state.createMenuItemProps({value, name})}
+            {...createMenuItemProps({value, name})}
           />))
       }</SelectField></div>
 
