@@ -88,14 +88,6 @@ export default class RandomNumberForm extends React.Component {
             <NamedRadixes
               radix={this.state.radix}
               onChange={radix => this.setState({radix})}
-
-              textFieldProps={{
-                hintText: 'Radix number'
-              }}
-
-              selectFieldProps={{
-                floatingLabelText: 'Radix name'
-              }}
             />
           </div>
         </CardActions>

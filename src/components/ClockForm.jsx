@@ -106,14 +106,6 @@ export default class ClockForm extends React.Component {
               radix={this.state.timestampRadix}
               names={this.state.timestampRadixNames}
               onChange={value => this.setState({timestampRadix: value})}
-
-              textFieldProps={{
-                hintText: 'Radix number'
-              }}
-
-              selectFieldProps={{
-                floatingLabelText: 'Radix name'
-              }}
             />
           </Tab>
         </Tabs>
