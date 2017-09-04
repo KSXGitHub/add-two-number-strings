@@ -10,6 +10,7 @@ cache:
   - '%USERPROFILE%\.nuget\packages'
   - '%APPDATA%\npm'
   - '%APPDATA%\npm-cache'
+  - '%LOCALAPPDATA%\Yarn'
   - node_modules
 
 image: Visual Studio 2015
@@ -21,16 +22,12 @@ clone_depth: 1
 install:
   - cmd: echo "Repo URL" && git remote get-url origin
   - ps: Install-Product node $env:nodejs_version
-  - cmd: IF %nodejs_version% EQU 0.8 npm -g install npm@2
-  - cmd: IF %nodejs_version% EQU 0.8 set PATH=%APPDATA%\npm;%PATH%
-  - cmd: npm -g install npm
-  - cmd: IF %nodejs_version% NEQ 0.8 set PATH=%APPDATA%\npm;%PATH%
-  - cmd: npm install
+  - cmd: yarn
 
 build_script:
   - cmd: echo "NodeJS version" && node --version
-  - cmd: echo "NPM version" && npm --version
-  - cmd: echo "Test" && npm test
+  - cmd: echo "YARN version" && yarn --version
+  - cmd: echo "Test" && yarn test
 
 artifacts:
   - path: dist\*.*
