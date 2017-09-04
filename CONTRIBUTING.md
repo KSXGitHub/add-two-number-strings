@@ -85,7 +85,7 @@ npm start # OR: yarn start
 npm test # OR: yarn test
 ```
 
-**NOTE:** When an attempt to modify React DOM tree is made, the test should fail because of [snapshots' changes](./test/main/src/client/components/__snapshots__). This happens to prevent developers from accidentally modifying DOM structure without explicit intention. To resolve this, you must either [*assert the changes*](#assert-the-changes) by committing snapshots or [*undo the changes*](#undo-the-changes).
+**NOTE:** When an attempt to modify React DOM tree is made, the test should fail because of [snapshots' changes](./test/src/components/__snapshots__). This happens to prevent developers from accidentally modifying DOM structure without explicit intention. To resolve this, you must either [*assert the changes*](#assert-the-changes) by committing snapshots or [*undo the changes*](#undo-the-changes).
 
 #### Run unit tests
 
@@ -101,7 +101,7 @@ npm run unit-test-watch # OR: yarn run unit-test-watch
 
 #### Snapshot testing
 
-When an attempt to modify React DOM tree is made, the test should fail because of [snapshots' changes](./test/main/src/client/components/__snapshots__). This happens to prevent developers from accidentally modifying DOM structure without explicit intention. To resolve this, you must either [*assert the changes*](#assert-the-changes) by committing snapshots or [*undo the changes*](#undo-the-changes).
+When an attempt to modify React DOM tree is made, the test should fail because of [snapshots' changes](./test/src/components/__snapshots__). This happens to prevent developers from accidentally modifying DOM structure without explicit intention. To resolve this, you must either [*assert the changes*](#assert-the-changes) by committing snapshots or [*undo the changes*](#undo-the-changes).
 
 ##### Assert the changes
 
@@ -129,7 +129,7 @@ When you do not want to modify React DOM structure but test fails due to snapsho
   * `git clean --dry-run` is absolutely safe, use it double-check the decision about to be made
   * `git clean --interactive` to make decision for every file individually
   * `git clean --force`: You must be absolutely certain that you won't regret after this
-  * [VS Code](https://code.visualstudio.com/) has an option called 'Discard All Changes'
+  * [VS Code](https://code.visualstudio.com/) has a feature called 'Discard All Changes'
 
 ## Project structure
 
