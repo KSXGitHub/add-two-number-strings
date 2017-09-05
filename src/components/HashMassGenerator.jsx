@@ -8,6 +8,7 @@ export default function HashMassGenerator (props) {
   const {
     container: Container = DEFAULT_CONTAINER,
     item: Item = DEFAULT_CONTAINER,
+    hashGeneratorProps = {},
     algorithmList = DEFAULT_ARGORITHM_LIST,
     data = '',
     encoding = 'utf8'
@@ -21,6 +22,7 @@ export default function HashMassGenerator (props) {
           algorithm={algorithm}
           data={data}
           encoding={encoding}
+          {...hashGeneratorProps}
         />
       </label></Item>
     ))
