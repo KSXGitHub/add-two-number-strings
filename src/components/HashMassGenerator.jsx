@@ -18,6 +18,7 @@ export default function HashMassGenerator (props) {
       <Item algorithm={algorithm} index={index} key={index}><label>
         {algorithm}:&nbsp;
         <HashGenerator
+          algorithm={algorithm}
           data={data}
           encoding={encoding}
         />
