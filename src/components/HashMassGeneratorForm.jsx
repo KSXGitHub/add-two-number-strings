@@ -51,7 +51,7 @@ export default class HashMassGeneratorForm extends React.Component {
 
           <FlatButton
             label='Clear'
-            onClick={() => this.setState({actualData: ''})}
+            onClick={() => this.setState({actualData: '', editableData: ''})}
             secondary
           />
         </div>
