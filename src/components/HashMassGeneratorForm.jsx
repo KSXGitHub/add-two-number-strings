@@ -51,6 +51,8 @@ export default class HashMassGeneratorForm extends React.Component {
             hintText='Data to be hash...'
             value={editableData}
             onChange={(_, editableData) => this.setState({editableData})}
+            fullWidth
+            multiLine
           />
         </div>
 
@@ -68,14 +70,14 @@ export default class HashMassGeneratorForm extends React.Component {
           <RaisedButton
             label='Generate'
             onClick={() => this.setState({actualData: editableData})}
-            disabled={actualData === editableData}
+            disabled={!editableData || actualData === editableData}
             primary
           />
 
           <FlatButton
             label='Clear'
             onClick={() => this.setState({actualData: '', editableData: ''})}
-            disabled={!editableData}
+            disabled={!actualData && !editableData}
             secondary
           />
         </div>
