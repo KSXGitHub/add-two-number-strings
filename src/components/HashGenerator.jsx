@@ -1,6 +1,9 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
 import crypto from 'crypto'
+
+export const DEFAULT_CONTAINER = ({children}) => (<span className='hash'>
+  {children}
+</span>)
 
 export const DEFAULT_DISPLAY = array => Array.from(array)
   .map(byte =>
@@ -28,6 +31,7 @@ export default class HashGenerator extends React.Component {
   render () {
     const {
       props: {
+        container: Container = DEFAULT_CONTAINER
         display = DEFAULT_DISPLAY
       },
       state: {
@@ -35,14 +39,14 @@ export default class HashGenerator extends React.Component {
       }
     } = this
 
-    return <Paper>
+    return <Container>
       <output>
         {value
           ? display(value)
           : <i>(Empty)</i>
         }
       </output>
-    </Paper>
+    </Container>
   }
 
   componentDidMount () {
