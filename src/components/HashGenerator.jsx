@@ -31,7 +31,7 @@ export default class HashGenerator extends React.Component {
   render () {
     const {
       props: {
-        container: Container = DEFAULT_CONTAINER
+        container: Container = DEFAULT_CONTAINER,
         display = DEFAULT_DISPLAY
       },
       state: {
