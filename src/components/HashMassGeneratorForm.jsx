@@ -51,6 +51,8 @@ export default class HashMassGeneratorForm extends React.Component {
             hintText='Data to be hash...'
             value={editableData}
             onChange={(_, editableData) => this.setState({editableData})}
+            fullWidth
+            multiLine
           />
         </div>
 
