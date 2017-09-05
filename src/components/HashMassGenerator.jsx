@@ -1,7 +1,7 @@
 import React from 'react'
 import HashGenerator from './HashGenerator.jsx'
 
-export const DEFAULT_CONTAINER = ({children}) => (<span>{children}</span>)
+export const DEFAULT_CONTAINER = ({children}) => (<div>{children}</div>)
 export const DEFAULT_ARGORITHM_LIST = ['md5', 'sha1', 'sha256', 'sha512']
 
 export default function HashMassGenerator (props) {
