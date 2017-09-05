@@ -5,6 +5,7 @@ import Toggle from 'material-ui/Toggle'
 import MuiWrapper from './MuiWrapper.jsx'
 import RandomNumberForm from './RandomNumberForm.jsx'
 import ClockForm from './ClockForm.jsx'
+import HashMassGeneratorForm from './HashMassGeneratorForm.jsx'
 import Footer from './Footer.jsx'
 
 export const TOP_PAPER_STYLE = {
@@ -36,6 +37,7 @@ export default class App extends React.Component {
       <main>
         <RandomNumberForm init={init} />
         <ClockForm darkTheme={darkTheme} />
+        <HashMassGeneratorForm />
         <Paper zDepth={0}>
           <Toggle
             label='Dark Theme'
