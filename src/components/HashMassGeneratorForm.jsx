@@ -31,10 +31,6 @@ export default class HashMassGeneratorForm extends React.Component {
 
       <CardActions expandable>
         <div>
-          <label htmlFor='hash-data'>Data:</label>
-        </div>
-
-        <div>
           <TextField
             hintText='Data to be hash...'
             value={editableData}
