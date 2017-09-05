@@ -37,3 +37,7 @@ deploy:
 
 after_deploy:
   - source ./sh/travis-ci/after-deploy.sh
+
+branches:
+  except:
+    - gh-pages
