@@ -5,13 +5,7 @@ export const DEFAULT_CONTAINER = ({children}) => (<span className='hash'>
   {children}
 </span>)
 
-export const DEFAULT_DISPLAY = array => Array.from(array)
-  .map(byte =>
-    [byte >> 4, byte & 0x0F]
-      .map(bits => bits.toString(16))
-      .join('')
-  )
-  .join('')
+export const DEFAULT_DISPLAY = array => array.toString('hex')
 
 export const LISTENED_PROP_NAMES = [
   'display',
