@@ -13,6 +13,11 @@ export const DISPLAY_FUNCTIONS = {
   dec: array => `[${Array.from(array).map(x => Number(x)).join(', ')}]`
 }
 
+export const HASH_GENERATOR_STYLE = {
+  fontFamily: 'monospace',
+  color: 'green'
+}
+
 export default class HashMassGeneratorForm extends React.Component {
   constructor (props) {
     super(props)
@@ -79,7 +84,10 @@ export default class HashMassGeneratorForm extends React.Component {
       <CardText expandable>
         <HashMassGenerator
           data={actualData}
-          hashGeneratorProps={{display: displayFunction}}
+          hashGeneratorProps={{
+            display: value =>
+              (<span style={HASH_GENERATOR_STYLE}>{displayFunction(value)}</span>)
+          }}
         />
       </CardText>
     </Card></Paper>
