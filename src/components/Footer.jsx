@@ -9,14 +9,10 @@ const style = {
 
 export default function Footer () {
   return <footer style={style}><Paper zDepth={0}>
-    <p>
-      Source code is available on&nbsp;
-      <a href='https://github.com/KSXGitHub/react-hello-world'>GitHub</a>
-    </p>
-    <p>
+    <section>
       Copyright © 2017 <a href='https://github.com/KSXGitHub'>Hoàng Văn Khải</a>
       <br />
       All rights reserved.
-    </p>
+    </section>
   </Paper></footer>
 }
