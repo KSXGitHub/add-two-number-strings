@@ -5,6 +5,7 @@ import Paper from 'material-ui/Paper'
 import TextField from 'material-ui/TextField'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton'
+import {green500} from 'material-ui/styles/colors'
 import HashMassGenerator from './HashMassGenerator.jsx'
 
 export const DISPLAY_FUNCTIONS = {
@@ -15,7 +16,7 @@ export const DISPLAY_FUNCTIONS = {
 
 export const HASH_GENERATOR_STYLE = {
   fontFamily: 'monospace',
-  color: 'green'
+  color: green500
 }
 
 export default class HashMassGeneratorForm extends React.Component {

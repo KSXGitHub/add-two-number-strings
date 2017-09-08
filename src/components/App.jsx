@@ -1,11 +1,12 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar'
 import Paper from 'material-ui/Paper'
-import Toggle from 'material-ui/Toggle'
 import MuiWrapper from './MuiWrapper.jsx'
+import GitHubIcon from './GitHubButton.jsx'
 import RandomNumberForm from './RandomNumberForm.jsx'
 import ClockForm from './ClockForm.jsx'
 import HashMassGeneratorForm from './HashMassGeneratorForm.jsx'
+import ThemeSwitcher from './ThemeSwitcher.jsx'
 import Footer from './Footer.jsx'
 
 export const TOP_PAPER_STYLE = {
@@ -32,17 +33,21 @@ export default class App extends React.Component {
 
     return <MuiWrapper darkTheme={darkTheme}><Paper style={TOP_PAPER_STYLE}>
       <header>
-        <AppBar title='Hello, World!!' showMenuIconButton={false} />
+        <AppBar
+          title='Hello, World!!'
+          showMenuIconButton={false}
+          iconElementRight={<GitHubIcon href='https://github.com/KSXGitHub/react-hello-world' />}
+        />
       </header>
       <main>
         <RandomNumberForm init={init} />
         <ClockForm darkTheme={darkTheme} />
         <HashMassGeneratorForm />
         <Paper zDepth={0}>
-          <Toggle
-            label='Dark Theme'
-            toggled={darkTheme}
-            onToggle={(_, darkTheme) => this.setState({darkTheme})}
+          <ThemeSwitcher
+            value={darkTheme}
+            onChange={darkTheme => this.setState({darkTheme})}
+            buttonProps={{fullWidth: true}}
           />
         </Paper>
       </main>
