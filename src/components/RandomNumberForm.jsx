@@ -3,7 +3,7 @@ import Paper from 'material-ui/Paper'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import Slider from 'material-ui/Slider'
 import Checkbox from 'material-ui/Checkbox'
-import {gray500, brown500} from 'material-ui/styles/colors'
+import {gray500, brown300} from 'material-ui/styles/colors'
 import RandomNumber from './RandomNumber.jsx'
 import NamedRadixes from './NamedRadixes.jsx'
 import ErrorMessage from './ErrorMessage.jsx'
@@ -110,7 +110,7 @@ export default class RandomNumberForm extends React.Component {
               color: gray500
             },
             value: {
-              color: brown500,
+              color: brown300,
               fontFamily: 'monospace',
               fontSize: '1.75em'
             }
