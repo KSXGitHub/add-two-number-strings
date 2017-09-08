@@ -21,8 +21,8 @@ export default function GitHubButton (props) {
       ...iconStyle
     }}
     tooltip='GitHub repo'
-    {...buttonProps}
     {...rest}
+    {...buttonProps}
   >
     <Icon {...iconProps} />
   </IconButton>
