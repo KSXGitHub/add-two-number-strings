@@ -1,6 +1,0 @@
-- babel-loader
-- loader: standard-loader
-  options:
-    error: true
-    snazzy: true
-    parser: babel-eslint
