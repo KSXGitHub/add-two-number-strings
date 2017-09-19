@@ -8,15 +8,15 @@ const uglifyJsPluginConfig = new UglifyJsPlugin({
   }
 })
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const htmlWebpackPluginConfig = new HtmlWebpackPlugin({
+const HtmlPlugin = require('html-webpack-plugin')
+const htmlPluginConfig = new HtmlPlugin({
   template: path.resolve(__dirname, '../src/client/index.html'),
   filename: 'index.html',
   inject: 'body'
 })
 
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const copyWebpackPluginConfig = new CopyWebpackPlugin([
+const CopyPlugin = require('copy-webpack-plugin')
+const copyPluginConfig = new CopyPlugin([
   {
     from: 'node_modules/monaco-editor/min/vs',
     to: 'vs'
@@ -25,6 +25,6 @@ const copyWebpackPluginConfig = new CopyWebpackPlugin([
 
 module.exports = [
   uglifyJsPluginConfig,
-  htmlWebpackPluginConfig,
-  copyWebpackPluginConfig
+  htmlPluginConfig,
+  copyPluginConfig
 ]
