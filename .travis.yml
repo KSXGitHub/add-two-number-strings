@@ -9,6 +9,15 @@ node_js:
 env:
   - COVERALLS=true
 
+cache:
+  directories:
+    - $HOME/.npm
+    - $HOME/.nvm
+    - $HOME/.node-gyp
+    - $HOME/.node_libraries
+    - $HOME/node_modules
+    - node_modules
+
 before_script:
   - chmod -R +x sh
   - source ./sh/travis-ci/before-script.sh

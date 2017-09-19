@@ -8,7 +8,9 @@ initdir () {
   initfs mkdir $1
 }
 
-for dir in $(./sh/lib/init-dir-list.sh)
-do
-  initdir $dir
-done
+[[ $DO_INIT_DIRS != 'true' ]] || {
+  for dir in $(./sh/lib/init-dir-list.sh)
+  do
+    initdir $dir
+  done
+}
