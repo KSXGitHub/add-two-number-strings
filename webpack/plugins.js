@@ -1,6 +1,13 @@
 'use strict'
 const path = require('path')
 
+const {UglifyJsPlugin} = require('webpack').optimize
+const uglifyJsPluginConfig = new UglifyJsPlugin({
+  compress: {
+    warnings: false
+  }
+})
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const htmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: path.resolve(__dirname, '../src/client/index.html'),
@@ -17,6 +24,7 @@ const copyWebpackPluginConfig = new CopyWebpackPlugin([
 ])
 
 module.exports = [
+  uglifyJsPluginConfig,
   htmlWebpackPluginConfig,
   copyWebpackPluginConfig
 ]
