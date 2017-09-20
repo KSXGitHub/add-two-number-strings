@@ -3,6 +3,7 @@ const path = require('path')
 
 const {UglifyJsPlugin} = require('webpack').optimize
 const uglifyJsPluginConfig = new UglifyJsPlugin({
+  sourceMap: true,
   compress: {
     warnings: false
   }
