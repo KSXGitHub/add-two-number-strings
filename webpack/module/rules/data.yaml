@@ -1,9 +1,7 @@
 - test:
   - and:
     - !!js/regexp /\.(js|jsx|es[0-9]?x?)$/
-    - not:
-      - !!js/regexp /monaco/
-      - !!js/regexp /node_modules|bower_components/
+    - not: !!js/regexp /node_modules|bower_components/
   - and:
     - !!js/regexp /node_modules\/.*.jsx?/
     - or:
