@@ -4,10 +4,12 @@
     - not:
       - !!js/regexp /monaco/
       - !!js/regexp /node_modules|bower_components/
-  - or:
-    - !!js/regexp /node_modules.*(x|concat|deep|parallel|product|range|spread)-iterable(|-base|-utils).*\.jsx?/
-    - !!js/regexp /node_modules.*just-try.*\.jsx?/
-    - !!js/regexp /node_modules.*simple-(class|function)-utils.*\.jsx?/
+  - and:
+    - !!js/regexp /node_modules\/.*.jsx?/
+    - or:
+      - !!js/regexp /(x|concat|deep|parallel|product|range|spread)-iterable(|-base|-utils)/
+      - !!js/regexp /just-try/
+      - !!js/regexp /simple-(class|function)-utils/
   loader: babel-loader
 - test: /\.(js|jsx|es[0-9]?x?)$/
   exclude: !!js/regexp /node_modules|bower_components/
