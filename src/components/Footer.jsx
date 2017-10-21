@@ -8,11 +8,11 @@ const style = {
 }
 
 export default function Footer () {
-  return <footer style={style}><Paper>
+  return <footer style={style}>
     <section>
       Copyright © 2017 <a href='https://github.com/KSXGitHub'>Hoàng Văn Khải</a>
       <br />
       All rights reserved.
     </section>
-  </Paper></footer>
+  </footer>
 }
