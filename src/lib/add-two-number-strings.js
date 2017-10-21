@@ -24,7 +24,7 @@ function validate (string) {
     .filter(x => x < '0' || x > '9')
 
   if (invalid.length) {
-    throw new TypeError(`Invalid characters: ${invalid.join(', ')}`)
+    throw new TypeError(`Invalid characters: ${[...new Set(invalid)].join(', ')}`)
   }
 
   return string
