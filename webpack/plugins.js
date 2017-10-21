@@ -16,16 +16,7 @@ const htmlPluginConfig = new HtmlPlugin({
   inject: 'body'
 })
 
-const CopyPlugin = require('copy-webpack-plugin')
-const copyPluginConfig = new CopyPlugin([
-  {
-    from: 'node_modules/monaco-editor/min/vs',
-    to: 'vs'
-  }
-])
-
 module.exports = [
   uglifyJsPluginConfig,
-  htmlPluginConfig,
-  copyPluginConfig
+  htmlPluginConfig
 ]
