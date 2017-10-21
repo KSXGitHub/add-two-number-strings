@@ -1,11 +1,9 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar'
 import Paper from 'material-ui/Paper'
+import Toolbar from 'material-ui/Toolbar'
+import Typography from 'material-ui/Typography'
 import MuiWrapper from './MuiWrapper.jsx'
-import GitHubIcon from './GitHubButton.jsx'
-import RandomNumberForm from './RandomNumberForm.jsx'
-import ClockForm from './ClockForm.jsx'
-import HashMassGeneratorForm from './HashMassGeneratorForm.jsx'
 import ThemeSwitcher from './ThemeSwitcher.jsx'
 import Footer from './Footer.jsx'
 
@@ -33,16 +31,13 @@ export default class App extends React.Component {
 
     return <MuiWrapper darkTheme={darkTheme}><Paper style={TOP_PAPER_STYLE}>
       <header>
-        <AppBar
-          title='Hello, World!!'
-          showMenuIconButton={false}
-          iconElementRight={<GitHubIcon href='https://github.com/KSXGitHub/react-hello-world' />}
-        />
+        <AppBar position='static'><Toolbar>
+          <Typography type='title' color='inherit'>
+            Add two number strings
+          </Typography>
+        </Toolbar></AppBar>
       </header>
       <main>
-        <RandomNumberForm init={init} />
-        <ClockForm darkTheme={darkTheme} />
-        <HashMassGeneratorForm />
         <Paper zDepth={0}>
           <ThemeSwitcher
             value={darkTheme}

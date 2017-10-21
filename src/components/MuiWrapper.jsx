@@ -1,8 +1,9 @@
 import React from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles'
+
+const theme = ['dark', 'light']
+  .map(type => ({[type]: createMuiTheme({palette: {type}})}))
+  .reduce((prev, current) => Object.assign(prev, current), {})
 
 export default function MuiWrapper (props) {
   const {
@@ -12,7 +13,7 @@ export default function MuiWrapper (props) {
   } = props
 
   return <MuiThemeProvider
-    muiTheme={getMuiTheme(darkTheme ? darkBaseTheme : lightBaseTheme)}
+    theme={theme[darkTheme ? 'dark' : 'light']}
     {...rest}
   >
     {children}

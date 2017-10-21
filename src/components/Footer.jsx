@@ -8,7 +8,7 @@ const style = {
 }
 
 export default function Footer () {
-  return <footer style={style}><Paper zDepth={0}>
+  return <footer style={style}><Paper>
     <section>
       Copyright © 2017 <a href='https://github.com/KSXGitHub'>Hoàng Văn Khải</a>
       <br />

@@ -1,6 +1,5 @@
 import React from 'react'
-import FlatButton from 'material-ui/FlatButton'
-import ActionLightbulbOutline from 'material-ui/svg-icons/action/lightbulb-outline'
+import Button from 'material-ui/Button'
 
 export default class ThemeSwitcher extends React.Component {
   constructor (props) {
@@ -32,17 +31,15 @@ export default class ThemeSwitcher extends React.Component {
       ? 'Let there be light!' // Dark → Light
       : "I'm Batman!" // Light → Dark
 
-    const icon = <ActionLightbulbOutline />
-
-    return <FlatButton
-      label={label}
+    return <Button
       onClick={() => {
         const newValue = !value
         this.setState({value: newValue})
         onChange(newValue, value)
       }}
-      icon={icon}
       {...buttonProps}
-    />
+    >
+      {label}
+    </Button>
   }
 }
