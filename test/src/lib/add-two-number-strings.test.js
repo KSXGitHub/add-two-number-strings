@@ -36,7 +36,7 @@ describe('Correct use-cases', () => {
     'Leading zeros',
     () => ProductIterable.pow(['0', '00', '0012500', '000658', '123'], 2)
       .forEach(([a, b]) => test(
-        `${strexpr(a, b)} should not contain leading zeros`,
+        `${strexpr(a, b)} should not contain leading zeroes`,
         () => expect(add(a, b)).not.toMatch(/^0+([^0]|0)/)
       ))
   )
