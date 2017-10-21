@@ -26,7 +26,7 @@ export default class Calculator extends React.Component {
       <TextField id='left' label={LABEL} value={left} onChange={handleChange('left')} />
       <TextField id='right' label={LABEL} value={right} onChange={handleChange('right')} />
 
-      <Typography>
+      <Typography><p>
         {jtry(
           () => add(String(left), String(right)),
 
@@ -37,7 +37,7 @@ export default class Calculator extends React.Component {
             <code>{value}</code>
           </span>
         )}
-      </Typography>
+      </p></Typography>
     </div>
   }
 }
