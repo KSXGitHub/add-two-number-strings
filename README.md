@@ -6,6 +6,7 @@ This is a demo of function `addTwoNumberStrings` which takes two strings of big 
 
 * The function is at directory [`src/lib/add-two-number-strings.js`](./src/lib/add-two-number-strings.js)
 * All UI components is at directory [`src/components`]('./src/components')
+* All unit-tests is at directory [`test`](./test)
 
 Read more at [CONTRIBUTING](./CONTRIBUTING.md)
 
