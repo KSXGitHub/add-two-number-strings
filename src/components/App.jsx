@@ -4,6 +4,7 @@ import Paper from 'material-ui/Paper'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
 import MuiWrapper from './MuiWrapper.jsx'
+import Calculator from './Calculator.jsx'
 import ThemeSwitcher from './ThemeSwitcher.jsx'
 import Footer from './Footer.jsx'
 
@@ -19,15 +20,14 @@ export default class App extends React.Component {
     super(props)
 
     const {
-      init,
       darkTheme = false
     } = props
 
-    this.state = {init, darkTheme}
+    this.state = {darkTheme}
   }
 
   render () {
-    const {init, darkTheme} = this.state
+    const {darkTheme} = this.state
 
     return <MuiWrapper darkTheme={darkTheme}><Paper style={TOP_PAPER_STYLE}>
       <header>
@@ -38,7 +38,8 @@ export default class App extends React.Component {
         </Toolbar></AppBar>
       </header>
       <main>
-        <Paper zDepth={0}>
+        <Paper>
+          <Calculator />
           <ThemeSwitcher
             value={darkTheme}
             onChange={darkTheme => this.setState({darkTheme})}
