@@ -1,7 +1,6 @@
 'use strict'
 
 function add (left, right) {
-  console.log({left, right})
   if (!right.length) return left
   if (left.length < right.length) return add(right, left)
 
