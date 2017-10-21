@@ -33,6 +33,15 @@ describe('Correct use-cases', () => {
   )
 
   describe(
+    'Leading zeros',
+    () => ProductIterable.pow(['0', '00', '0012500', '000658', '123'], 2)
+      .forEach(([a, b]) => test(
+        `${strexpr(a, b)} should not contain leading zeros`,
+        () => expect(add(a, b)).not.toMatch(/^0+([^0]|0)/)
+      ))
+  )
+
+  describe(
     'Same length; Sum of each digit-pair is less than 10',
     () => multipleUnits([
       [123, 456], [111, 222], [0, 1], [333, 111], [2, 5]
