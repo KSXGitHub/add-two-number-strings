@@ -38,14 +38,12 @@ export default class App extends React.Component {
         </Toolbar></AppBar>
       </header>
       <main>
-        <Paper>
-          <Calculator />
-          <ThemeSwitcher
-            value={darkTheme}
-            onChange={darkTheme => this.setState({darkTheme})}
-            buttonProps={{fullWidth: true}}
-          />
-        </Paper>
+        <Calculator />
+        <ThemeSwitcher
+          value={darkTheme}
+          onChange={darkTheme => this.setState({darkTheme})}
+          buttonProps={{fullWidth: true}}
+        />
       </main>
       <Footer />
     </Paper></MuiWrapper>

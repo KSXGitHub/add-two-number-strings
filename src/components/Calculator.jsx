@@ -1,5 +1,4 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
 import TextField from 'material-ui/TextField'
 import Typography from 'material-ui/Typography'
 import ErrorMessage from './ErrorMessage.jsx'
@@ -23,7 +22,7 @@ export default class Calculator extends React.Component {
 
     const handleChange = name => event => this.setState({[name]: event.target.value})
 
-    return <Paper>
+    return <div>
       <TextField id='left' label={LABEL} value={left} onChange={handleChange('left')} />
       <TextField id='right' label={LABEL} value={right} onChange={handleChange('right')} />
 
@@ -39,6 +38,6 @@ export default class Calculator extends React.Component {
           </span>
         )}
       </Typography>
-    </Paper>
+    </div>
   }
 }
