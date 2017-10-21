@@ -21,6 +21,15 @@ describe('Correct use-cases', () => {
   )
 
   describe(
+    'Zero sum',
+    () => ProductIterable.pow(['', '0', '00'], 2)
+      .forEach(([a, b]) => test(
+        `'${a}' + '${b}' → '0'`,
+        () => expect(add(a, b)).toBe('0')
+      ))
+  )
+
+  describe(
     'Same length; Sum of each digit-pair is less than 10',
     () => multipleUnits([
       [123, 456], [111, 222], [0, 1], [333, 111], [2, 5]

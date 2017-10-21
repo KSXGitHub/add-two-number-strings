@@ -29,4 +29,4 @@ function validate (string) {
   return string
 }
 
-module.exports = (left, right) => add(validate(left), validate(right))
+module.exports = (left, right) => add(validate(left), validate(right)) || '0'
