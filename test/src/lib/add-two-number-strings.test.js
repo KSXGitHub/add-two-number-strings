@@ -25,7 +25,7 @@ describe('Correct use-cases', () => {
 
   describe(
     'Zero sum',
-    () => ProductIterable.pow(['', '0', '00'], 2)
+    () => ProductIterable.pow(['', '0', '00', '000'], 2)
       .forEach(([a, b]) => test(
         strcmpr(a, b, '0'),
         () => expect(add(a, b)).toBe('0')
