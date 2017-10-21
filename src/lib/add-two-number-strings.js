@@ -1,7 +1,18 @@
 'use strict'
 
 function add (left, right) {
-  return String(Number(left) + Number(right))
+  console.log({left, right})
+  if (!right.length) return left
+  if (left.length < right.length) return add(right, left)
+
+  const lastLeft = parseInt(left.slice(-1))
+  const lastRight = parseInt(right.slice(-1))
+  const lastTotal = lastLeft + lastRight
+  const next = add(left.slice(0, -1), right.slice(0, -1))
+  const prefix = lastTotal < 10 ? next : add(next, '1')
+  const suffix = String(lastTotal).slice(-1)
+
+  return prefix + suffix
 }
 
 function validate (string) {
