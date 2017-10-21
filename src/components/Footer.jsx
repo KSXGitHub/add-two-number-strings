@@ -1,5 +1,4 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
 
 const style = {
   fontFamily: "'Roboto', sans-serif",
