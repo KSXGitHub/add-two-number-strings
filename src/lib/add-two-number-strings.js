@@ -30,4 +30,4 @@ function validate (string) {
 }
 
 module.exports = (left, right) =>
-  add(validate(left), validate(right)).replace(/0+/, '') || '0'
+  add(validate(left), validate(right)).replace(/^0+/, '') || '0'
