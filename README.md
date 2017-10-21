@@ -2,6 +2,19 @@
 
 This is a demo of function `addTwoNumberStrings` which takes two strings of big decimal number and return total as a string of big decimal number.
 
+## Algorithm
+
+### Input, Output
+
+* Input: Strings of two big positive integers A and B (decimal)
+* Output: A + B as string in decimal
+
+### Function Signature
+
+```typescript
+function add(left: string, right: string): string;
+```
+
 ## Code
 
 * The function is at file [`src/lib/add-two-number-strings.js`](./src/lib/add-two-number-strings.js)
