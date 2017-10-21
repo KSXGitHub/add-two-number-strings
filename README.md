@@ -1,10 +1,13 @@
-# ReactJS Hello World
+# Add two number strings
 
-[![TravisCI Build Status](https://travis-ci.org/KSXGitHub/react-hello-world.svg?branch=master)](https://travis-ci.org/KSXGitHub/react-hello-world) [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/30vr3imctyl3t0r3?svg=true)](https://ci.appveyor.com/project/KSXGitHub/react-hello-world) [![CircleCI Build status](https://circleci.com/gh/KSXGitHub/react-hello-world.svg?style=svg)](https://circleci.com/gh/KSXGitHub/react-hello-world) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Coverage Status](https://coveralls.io/repos/github/KSXGitHub/react-hello-world/badge.svg?branch=master)](https://coveralls.io/github/KSXGitHub/react-hello-world?branch=master)
+This is a demo of function `addTwoNumberStrings` which takes two strings of big decimal number and return total as a string of big decimal number.
 
-## Contributing
+## Code
 
-Read [CONTRIBUTING.md](./CONTRIBUTING.md)
+* The function is at directory [`src/lib/add-two-number-strings.js`](./src/lib/add-two-number-strings.js)
+* All UI components is at directory [`src/components`]('./src/components')
+
+Read more at [CONTRIBUTING](./CONTRIBUTING.md)
 
 ## License
 
