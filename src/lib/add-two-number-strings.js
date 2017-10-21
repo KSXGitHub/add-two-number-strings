@@ -1,7 +1,7 @@
 'use strict'
 
 function add (left, right) {
-  return Number(left) + Number(right)
+  return String(Number(left) + Number(right))
 }
 
 function validate (string) {
