@@ -1,5 +1,7 @@
 # Add two number strings
 
+[![Build Status](https://travis-ci.org/KSXGitHub/add-two-number-strings.svg?branch=master)](https://travis-ci.org/KSXGitHub/add-two-number-strings) [![Coverage Status](https://coveralls.io/repos/github/KSXGitHub/add-two-number-strings/badge.svg?branch=master)](https://coveralls.io/github/KSXGitHub/add-two-number-strings?branch=master)
+
 This is a demo of function `addTwoNumberStrings` which takes two strings of big decimal number and return total as a string of big decimal number.
 
 ## Algorithm
