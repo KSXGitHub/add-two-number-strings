@@ -3,10 +3,13 @@ const {RangeIterable, ProductIterable} = require('x-iterable')
 const add = require('../../../src/lib/add-two-number-strings')
 
 describe('Correct use-cases', () => {
+  const strexpr = (a, b) => `add('${a}', '${b}')`
+  const strcmpr = (a, b, s) => `${strexpr(a, b)} should be '${s}'`
+
   const unit = (a, b) => {
     const sum = a + b
     return test(
-      `${a} + ${b} === ${sum}`,
+      strcmpr(a, b, sum),
       () => expect(add(String(a), String(b))).toBe(String(sum))
     )
   }
@@ -24,7 +27,7 @@ describe('Correct use-cases', () => {
     'Zero sum',
     () => ProductIterable.pow(['', '0', '00'], 2)
       .forEach(([a, b]) => test(
-        `'${a}' + '${b}' → '0'`,
+        strcmpr(a, b, '0'),
         () => expect(add(a, b)).toBe('0')
       ))
   )
