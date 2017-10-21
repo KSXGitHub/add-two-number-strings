@@ -48,3 +48,32 @@ describe('Correct use-cases', () => {
     ])
   )
 })
+
+describe('Incorrect use-cases', () => {
+  const unit = (a, b, error) => test(
+    `'${a} + ${b}' should throws ${error ? `match {error}` : 'an error'}`,
+    () => expect(() => add(a, b)).toThrow(...error ? [error] : [])
+  )
+
+  describe('Use non-digit characters', () => {
+    [
+      ['+123', '456'],
+      ['25-3', '4'],
+      ['123', '-12'],
+      ['22.5', '88+9'],
+      ['abc', 'def']
+    ].forEach(x => unit(...x, /Invalid characters:/))
+  })
+
+  const nonStrings = [
+    {},
+    () => {},
+    undefined,
+    null,
+    123
+  ]
+
+  describe('', () => {
+    nonStrings.forEach((x, i) => unit(x, i, /Must be a string/))
+  })
+})
