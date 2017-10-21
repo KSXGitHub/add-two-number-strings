@@ -4,8 +4,8 @@ This is a demo of function `addTwoNumberStrings` which takes two strings of big 
 
 ## Code
 
-* The function is at directory [`src/lib/add-two-number-strings.js`](./src/lib/add-two-number-strings.js)
-* Its unit-test is at directory [`test`](./test/src/lib/add-two-number-strings.test.js)
+* The function is at file [`src/lib/add-two-number-strings.js`](./src/lib/add-two-number-strings.js)
+* Its unit-test is at file [`test/src/lib/add-two-number-strings.test.js`](./test/src/lib/add-two-number-strings.test.js)
 * All UI components is at directory [`src/components`]('./src/components')
 
 Read more at [CONTRIBUTING](./CONTRIBUTING.md)
