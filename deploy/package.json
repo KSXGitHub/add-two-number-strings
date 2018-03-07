@@ -2,7 +2,7 @@
   "version": "0.0.0",
   "main": "index.js",
   "dependencies": {
-    "github": "^13.0.0",
+    "github": "^14.0.0",
     "co": "^4.6.0"
   }
 }
