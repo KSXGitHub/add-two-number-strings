@@ -6,11 +6,11 @@
   "dependencies": {
     "just-try": "^2.0.1",
     "material-ui": "^1.0.0-beta.17",
-    "moment": "^2.18.1",
+    "moment": "^2.19.3",
     "mui-icons": "^1.2.1",
     "product-iterable": "^3.0.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.1",
     "standard-loader": "^6.0.1"
   },
   "devDependencies": {
